@@ -1,0 +1,16 @@
+{
+  "domain": "https://frnds.kz",
+  "phone": "+77074809215",
+  "whatsapp": "77074809215",
+  "instagram": "https://www.instagram.com/frnds.kz",
+  "twogis": "https://2gis.kz/astana/firm/70000001113515854",
+  "hours": { "open": "09:00", "close": "23:00" },
+  "coords": { "lat": 51.119566, "lon": 71.484317 },
+  "address": {
+    "ru": "Астана, улица Сағадат Нұрмағамбетов, 25",
+    "kk": "Астана, Сағадат Нұрмағамбетов көшесі, 25",
+    "en": "Astana, Sagadat Nurmagambetov Street 25"
+  },
+  "rating": { "value": 4.9, "count": 182 },
+  "aggregators": []
+}
