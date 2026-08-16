@@ -19,8 +19,10 @@ def _hero(site, texts, lang):
     return (
         '<section class="hero"><div class="container hero__inner">'
         '<div class="hero__text">'
-        '<img class="hero__logo" src="/img/logo/frnds-orange-640.png" alt="Frnds"'
-        ' width="320" height="149" fetchpriority="high">'
+        # Логотип рукописный, поэтому это картинка — но заголовок страницы
+        # должен быть настоящим h1, иначе у главной нет заголовка для поиска.
+        '<h1 class="hero__h1"><img class="hero__logo" src="/img/logo/frnds-orange-640.png"'
+        ' alt="%(logo_alt)s" width="320" height="149" fetchpriority="high"></h1>'
         '<p class="hero__kicker">%(kicker)s</p>'
         '<p class="hero__lead">%(lead)s</p>'
         '<div class="hero__actions">'
@@ -33,7 +35,8 @@ def _hero(site, texts, lang):
         '<img src="/img/pizza/pizza-margherita-800.jpg" alt="%(alt)s"'
         ' width="800" height="800" fetchpriority="high">'
         "</div></div></section>"
-        % {"kicker": escape(texts["hero_kicker"]), "lead": escape(texts["hero_text"]),
+        % {"logo_alt": escape(texts["hero_logo_alt"], quote=True),
+           "kicker": escape(texts["hero_kicker"]), "lead": escape(texts["hero_text"]),
            "menu_url": url(lang, "menu"), "cta_menu": escape(t("cta.menu", lang)),
            "wa": wa, "cta_wa": escape(t("cta.whatsapp", lang)),
            "address": escape(site.address[lang]), "today": escape(t("hours.today", lang)),

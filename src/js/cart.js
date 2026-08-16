@@ -22,7 +22,8 @@
       note: 'Это заготовка сообщения — заказ подтвердится в переписке.',
       pickup: 'Самовывоз', dinein: 'В зал', clear: 'Очистить',
       added: 'Добавлено', close: 'Закрыть', remove: 'Убрать',
-      greeting: 'Здравствуйте! Заказ с сайта:', open: 'Открыть заказ'
+      greeting: 'Здравствуйте! Заказ с сайта:', open: 'Открыть заказ',
+      plural: ['позиция', 'позиции', 'позиций']
     },
     kk: {
       title: 'Сіздің тапсырысыңыз', empty: 'Әзірге бос. Дәмді бірдеңе таңдаңыз.',
@@ -30,7 +31,8 @@
       note: 'Бұл — хабарлама дайындамасы, тапсырыс хат алмасуда расталады.',
       pickup: 'Өзім аламын', dinein: 'Залда', clear: 'Тазалау',
       added: 'Қосылды', close: 'Жабу', remove: 'Алып тастау',
-      greeting: 'Сәлеметсіз бе! Сайттан тапсырыс:', open: 'Тапсырысты ашу'
+      greeting: 'Сәлеметсіз бе! Сайттан тапсырыс:', open: 'Тапсырысты ашу',
+      plural: ['позиция', 'позиция', 'позиция']
     },
     en: {
       title: 'Your order', empty: 'Empty for now. Pick something tasty.',
@@ -38,9 +40,23 @@
       note: 'This only drafts a message — the order is confirmed in chat.',
       pickup: 'Pickup', dinein: 'Dine in', clear: 'Clear',
       added: 'Added', close: 'Close', remove: 'Remove',
-      greeting: 'Hello! An order from your website:', open: 'Open order'
+      greeting: 'Hello! An order from your website:', open: 'Open order',
+      plural: ['item', 'items', 'items']
     }
   }[LANG] || {};
+
+  /* Русский требует три формы: 1 позиция, 2 позиции, 5 позиций.
+     Казахский обходится одной, английский — двумя. */
+  function plural(count) {
+    var forms = STR.plural;
+    if (LANG !== 'ru') return count === 1 ? forms[0] : forms[1];
+    var mod100 = count % 100;
+    var mod10 = count % 10;
+    if (mod100 >= 11 && mod100 <= 14) return forms[2];
+    if (mod10 === 1) return forms[0];
+    if (mod10 >= 2 && mod10 <= 4) return forms[1];
+    return forms[2];
+  }
 
   /* ---------- хранилище ---------- */
 
@@ -233,7 +249,7 @@
     var count = list.reduce(function (n, i) { return n + i.qty; }, 0);
 
     bar.classList.toggle('is-visible', count > 0);
-    countEl.textContent = count + ' ' + STR.items;
+    countEl.textContent = count + ' ' + plural(count);
     sumEl.textContent = money(sum);
 
     listEl.innerHTML = list.length

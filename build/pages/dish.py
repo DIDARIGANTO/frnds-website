@@ -67,8 +67,14 @@ def build(site, menu, item, lang):
            "similar": _similar(menu, item, lang)}
     )
 
-    title = "%s — %s, Frnds %s" % (
-        name, {"ru": "пицца", "kk": "пицца", "en": "pizza"}[lang], CITY[lang])
+    # Названия пицц на русском и казахском часто совпадают буква в букву
+    # («Маргарита»), поэтому шаблон заголовка у языков разный — иначе
+    # версии неразличимы в поисковой выдаче.
+    title = {
+        "ru": "%s — пицца, Frnds Астана" % name,
+        "kk": "%s — Frnds пиццасы, Астана" % name,
+        "en": "%s pizza — Frnds, Astana" % name,
+    }[lang]
     description = "%s %s — %s. %s" % (
         name, money(item.price), item.desc[lang],
         {"ru": "Заказ в WhatsApp, самовывоз и зал в Астане.",
