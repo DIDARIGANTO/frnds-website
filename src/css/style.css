@@ -380,11 +380,17 @@ body[data-lang="kk"] .display { font-family: Manrope, system-ui, sans-serif; fon
 .split img { border-radius: var(--radius-card); }
 
 .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+/* figure и blockquote приходят с браузерными отступами по 40px —
+   без сброса карточка отзыва на телефоне сжимается почти вдвое. */
 .quote {
+  margin: 0;
   background: var(--surface); border-radius: var(--radius-card); padding: 24px;
   font-size: 14.5px; line-height: 1.6;
 }
-.quote footer { margin-top: 10px; color: var(--ink-soft); font-size: 13px; }
+.quote blockquote { margin: 0; }
+.quote blockquote::before { content: "«"; }
+.quote blockquote::after { content: "»"; }
+.quote footer { margin-top: 10px; color: var(--ink-soft); font-size: 13px; font-weight: 600; }
 .rating-line { display: flex; align-items: baseline; gap: 12px; margin-bottom: 22px; }
 .rating-line strong { font-size: 44px; font-weight: 800; color: var(--brand-deep); }
 
