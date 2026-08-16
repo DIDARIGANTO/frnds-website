@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#F4E9DC"/>
+  <circle cx="450" cy="255" r="94" fill="none" stroke="#FF7F17" stroke-width="3" opacity=".55"/>
+  <path d="M400 262 c 18 -26 44 -30 58 -12 c 16 -20 44 -12 46 10 c 2 24 -30 44 -52 58 c -24 -12 -56 -32 -52 -56 z"
+        fill="#FF7F17" opacity=".7"/>
+  <text x="450" y="415" font-family="Georgia, serif" font-style="italic" font-size="30"
+        fill="#8A7B6B" text-anchor="middle">Здесь будет фото нашего зала</text>
+  <text x="450" y="455" font-family="Georgia, serif" font-size="19"
+        fill="#B0A392" text-anchor="middle">frnds · дом вне дома</text>
+</svg>
