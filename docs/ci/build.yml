@@ -1,0 +1,42 @@
+name: Сборка сайта
+
+# Гоняем тесты и собираем сайт при каждой правке — так опечатка в цене
+# или сломанный JSON находятся сразу, а не при заливке на хостинг.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Тесты
+        run: python -m unittest discover -s tests -t . -v
+
+      - name: Сборка
+        run: python build.py
+
+      - name: Проверить, что собрались все страницы
+        run: |
+          COUNT=$(find dist -name index.html | wc -l | tr -d ' ')
+          echo "Собрано страниц: $COUNT"
+          if [ "$COUNT" -ne 69 ]; then
+            echo "Ожидалось 69 страниц, собрано $COUNT"
+            exit 1
+          fi
+
+      # Готовый сайт можно скачать из вкладки Actions одним архивом
+      # и залить на хостинг, не собирая ничего у себя на компьютере.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist/
+          retention-days: 30
