@@ -31,9 +31,16 @@ def _hero(site, texts, lang):
         "</div>"
         '<p class="hero__meta"><span class="dot"></span>%(address)s · %(today)s %(close)s</p>'
         "</div>"
+        # Фото героя — это LCP страницы, поэтому webp с двумя размерами
+        # и fetchpriority: на телефоне грузится 400px вместо 800px.
         '<div class="hero__media"><span class="hero__circle" aria-hidden="true"></span>'
+        "<picture>"
+        '<source type="image/webp" sizes="(max-width: 900px) 88vw, 460px"'
+        ' srcset="/img/pizza/pizza-margherita-400.webp 400w,'
+        ' /img/pizza/pizza-margherita-800.webp 800w">'
         '<img src="/img/pizza/pizza-margherita-800.jpg" alt="%(alt)s"'
-        ' width="800" height="800" fetchpriority="high">'
+        ' width="800" height="800" fetchpriority="high" decoding="async">'
+        "</picture>"
         "</div></div></section>"
         % {"logo_alt": escape(texts["hero_logo_alt"], quote=True),
            "kicker": escape(texts["hero_kicker"]), "lead": escape(texts["hero_text"]),
