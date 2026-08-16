@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Статический многоязычный сайт пиццерии Frnds в Астане — 69 страниц на RU/KZ/EN, меню на 104 позиции, корзина с выгрузкой заказа в WhatsApp, гео-страницы под районы города.
+**Goal:** Статический многоязычный сайт пиццерии Frnds в Астане — 69 страниц на RU/KZ/EN, меню на 105 позиций, корзина с выгрузкой заказа в WhatsApp, гео-страницы под районы города.
 
 **Architecture:** Генератор на чистом Python 3.9 (только stdlib) собирает статические HTML из JSON-данных. HTML строится функциями-компонентами, а не текстовыми шаблонами: нет самодельного парсера, всё покрывается обычными unit-тестами, экранирование через `html.escape`. Фронтенд — один CSS и два маленьких JS без фреймворков. Результат в `dist/` заливается на любой хостинг.
 
@@ -38,7 +38,7 @@ tools/
   prepare_images.py       разовая нарезка фото (Pillow)
 data/
   site.json               контакты, часы, домен, соцсети
-  menu.json               20 разделов, 104 позиции, 3 языка
+  menu.json               20 разделов, 105 позиций, 3 языка
   pages/                  тексты страниц: <page>.<lang>.json
 src/
   css/style.css
@@ -446,7 +446,7 @@ git add data/site.json && git commit -m "feat: контакты и настро�
 
 ---
 
-## Task 4: Меню — 104 позиции на трёх языках
+## Task 4: Меню — 105 позиций на трёх языках
 
 **Files:**
 - Create: `data/menu.json`
@@ -549,13 +549,13 @@ git add data/site.json && git commit -m "feat: контакты и настро�
 - [ ] **Step 6: Проверить данные валидатором**
 
 Run: `python3 -c "from build.data import load_menu; m = load_menu('data/menu.json'); print(len(m.categories), 'категорий,', len(m.items), 'позиций,', len(m.with_photos()), 'с фото')"`
-Expected: `21 категорий, 104 позиций, 13 с фото`
+Expected: `21 категорий, 105 позиций, 13 с фото`
 
 - [ ] **Step 7: Commit**
 
 ```bash
 git add data/menu.json docs/перевод-на-проверку.md
-git commit -m "feat: меню на 104 позиции в трёх языках"
+git commit -m "feat: меню на 105 позиций в трёх языках"
 ```
 
 ---
@@ -1678,7 +1678,7 @@ class TestMenuPage(unittest.TestCase):
 ```
 
 Run: `python3 -m unittest tests.test_pages -v`
-Expected: PASS — все 104 позиции и 21 якорь на месте.
+Expected: PASS — все 105 позиций и 21 якорь на месте.
 
 - [ ] **Step 3: Commit**
 

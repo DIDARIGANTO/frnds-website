@@ -1,0 +1,1819 @@
+{
+ "categories": [
+  {
+   "id": "pizza",
+   "group": "pizza",
+   "order": 1,
+   "name": {
+    "ru": "Пицца",
+    "kk": "Пицца",
+    "en": "Pizza"
+   }
+  },
+  {
+   "id": "breakfast",
+   "group": "kitchen",
+   "order": 2,
+   "name": {
+    "ru": "Завтраки",
+    "kk": "Таңғы астар",
+    "en": "Breakfast"
+   }
+  },
+  {
+   "id": "panuozzo",
+   "group": "kitchen",
+   "order": 3,
+   "name": {
+    "ru": "Пануоццо",
+    "kk": "Пануоццо",
+    "en": "Panuozzo"
+   }
+  },
+  {
+   "id": "pasta",
+   "group": "kitchen",
+   "order": 4,
+   "name": {
+    "ru": "Свежая паста",
+    "kk": "Фреш пасталар",
+    "en": "Fresh pasta"
+   }
+  },
+  {
+   "id": "salads",
+   "group": "kitchen",
+   "order": 5,
+   "name": {
+    "ru": "Салаты",
+    "kk": "Салаттар",
+    "en": "Salads"
+   }
+  },
+  {
+   "id": "soups",
+   "group": "kitchen",
+   "order": 6,
+   "name": {
+    "ru": "Супы",
+    "kk": "Сорпалар",
+    "en": "Soups"
+   }
+  },
+  {
+   "id": "hot",
+   "group": "kitchen",
+   "order": 7,
+   "name": {
+    "ru": "Горячее",
+    "kk": "Ыстық тағамдар",
+    "en": "Main courses"
+   }
+  },
+  {
+   "id": "sides",
+   "group": "kitchen",
+   "order": 8,
+   "name": {
+    "ru": "Гарниры",
+    "kk": "Гарнирлер",
+    "en": "Sides"
+   }
+  },
+  {
+   "id": "bread",
+   "group": "kitchen",
+   "order": 9,
+   "name": {
+    "ru": "Хлеб",
+    "kk": "Нан",
+    "en": "Bread"
+   }
+  },
+  {
+   "id": "desserts",
+   "group": "kitchen",
+   "order": 10,
+   "name": {
+    "ru": "Десерты",
+    "kk": "Тіскебасарлар",
+    "en": "Desserts"
+   }
+  },
+  {
+   "id": "coffee",
+   "group": "bar",
+   "order": 11,
+   "name": {
+    "ru": "Классический кофе",
+    "kk": "Классикалық кофе",
+    "en": "Classic coffee"
+   }
+  },
+  {
+   "id": "specialty",
+   "group": "bar",
+   "order": 12,
+   "name": {
+    "ru": "Спешелти напитки",
+    "kk": "Арнайы сусындар",
+    "en": "Specialty drinks"
+   }
+  },
+  {
+   "id": "tea",
+   "group": "bar",
+   "order": 13,
+   "name": {
+    "ru": "Классический чай",
+    "kk": "Классикалық шай",
+    "en": "Classic tea"
+   }
+  },
+  {
+   "id": "signature-tea",
+   "group": "bar",
+   "order": 14,
+   "name": {
+    "ru": "Авторские чаи",
+    "kk": "Авторлық шайлар",
+    "en": "Signature teas"
+   }
+  },
+  {
+   "id": "ice-tea",
+   "group": "bar",
+   "order": 15,
+   "name": {
+    "ru": "Айс-ти",
+    "kk": "Айс-ти",
+    "en": "Iced tea"
+   }
+  },
+  {
+   "id": "lemonades",
+   "group": "bar",
+   "order": 16,
+   "name": {
+    "ru": "Лимонады (0,4 л)",
+    "kk": "Лимонадтар (0,4 стақан)",
+    "en": "Lemonades (0.4 l)"
+   }
+  },
+  {
+   "id": "smoothies",
+   "group": "bar",
+   "order": 17,
+   "name": {
+    "ru": "Смузи",
+    "kk": "Смузилер",
+    "en": "Smoothies"
+   }
+  },
+  {
+   "id": "milkshakes",
+   "group": "bar",
+   "order": 18,
+   "name": {
+    "ru": "Милкшейки",
+    "kk": "Милкшейктер",
+    "en": "Milkshakes"
+   }
+  },
+  {
+   "id": "soft-drinks",
+   "group": "bar",
+   "order": 19,
+   "name": {
+    "ru": "Напитки",
+    "kk": "Сусындар",
+    "en": "Soft drinks"
+   }
+  },
+  {
+   "id": "milk",
+   "group": "bar",
+   "order": 20,
+   "name": {
+    "ru": "Альтернативное молоко",
+    "kk": "Баламалы сүт",
+    "en": "Alternative milk"
+   }
+  },
+  {
+   "id": "coffee-addons",
+   "group": "bar",
+   "order": 21,
+   "name": {
+    "ru": "Добавки к кофе",
+    "kk": "Кофеге қосымша",
+    "en": "Coffee add-ons"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "pizza-meat-kazy",
+   "category": "pizza",
+   "price": 4690,
+   "photo": "pizza-meat-kazy",
+   "name": {
+    "ru": "Пицца с мясом и казы",
+    "kk": "Ет пен қазы қосылған пицца",
+    "en": "Beef and kazy pizza"
+   },
+   "desc": {
+    "ru": "Томлёное мясо, ароматное казы, моцарелла, томатно-сливочный соус и маринованный лук.",
+    "kk": "Бұқтырылған ет, хош иісті қазы, моцарелла, қызанақ-кілегей тұздығы және маринадталған пияз.",
+    "en": "Braised beef, fragrant kazy (horse sausage), mozzarella, creamy tomato sauce and pickled onions."
+   }
+  },
+  {
+   "id": "pizza-margherita",
+   "category": "pizza",
+   "price": 3190,
+   "photo": "pizza-margherita",
+   "badges": [
+    "hit"
+   ],
+   "name": {
+    "ru": "Маргарита",
+    "kk": "Маргарита",
+    "en": "Margherita"
+   },
+   "desc": {
+    "ru": "Классическая пицца на фирменном тесте: томатный соус, моцарелла, спелые томаты, базилик и ароматное масло.",
+    "kk": "Фирмалық қамырдағы классикалық пицца: қызанақ тұздығы, моцарелла, піскен қызанақ, базилик және хош иісті май.",
+    "en": "Classic pizza on our signature dough: tomato sauce, mozzarella, ripe tomatoes, basil and aromatic oil."
+   }
+  },
+  {
+   "id": "pizza-pepperoni",
+   "category": "pizza",
+   "price": 3590,
+   "photo": "pizza-pepperoni",
+   "badges": [
+    "hit"
+   ],
+   "tags": [
+    "spicy"
+   ],
+   "name": {
+    "ru": "Пепперони",
+    "kk": "Пепперони",
+    "en": "Pepperoni"
+   },
+   "desc": {
+    "ru": "Пикантная пепперони, моцарелла и сливочный соус с ароматом свежего базилика.",
+    "kk": "Ащы пепперони, моцарелла және балғын базиликтің хош иісі бар кілегейлі тұздық.",
+    "en": "Spicy pepperoni, mozzarella and a creamy sauce with fresh basil."
+   }
+  },
+  {
+   "id": "pizza-salmon-broccoli",
+   "category": "pizza",
+   "price": 4190,
+   "photo": "pizza-salmon-broccoli",
+   "name": {
+    "ru": "Лосось и брокколи",
+    "kk": "Ақсерке мен брокколи",
+    "en": "Salmon and broccoli"
+   },
+   "desc": {
+    "ru": "Слабосолёный лосось, брокколи, моцарелла, сливочный соус, крем из «Фетаксы» и лёгкая цитрусовая нотка.",
+    "kk": "Жеңіл тұздалған ақсерке, брокколи, моцарелла, кілегейлі тұздық, «Фетакса» кремі және жеңіл цитрусты дәм.",
+    "en": "Lightly cured salmon, broccoli, mozzarella, creamy sauce, Fetaxa cheese cream and a light citrus note."
+   }
+  },
+  {
+   "id": "pizza-bolognese",
+   "category": "pizza",
+   "price": 3890,
+   "photo": "pizza-bolognese",
+   "name": {
+    "ru": "Болоньезе",
+    "kk": "Болоньезе",
+    "en": "Bolognese"
+   },
+   "desc": {
+    "ru": "Насыщенный соус болоньезе, моцарелла, томаты, пармезан и свежая зелень на хрустящей основе.",
+    "kk": "Қанық болоньезе тұздығы, моцарелла, қызанақ, пармезан және қытырлақ негіздегі балғын көк шөптер.",
+    "en": "Rich bolognese sauce, mozzarella, tomatoes, parmesan and fresh herbs on a crispy base."
+   }
+  },
+  {
+   "id": "pizza-stracciatella-lecho",
+   "category": "pizza",
+   "price": 3990,
+   "photo": "pizza-stracciatella-lecho",
+   "name": {
+    "ru": "Лечо со страчателлой",
+    "kk": "Страчателла қосылған лечо",
+    "en": "Lecho with stracciatella"
+   },
+   "desc": {
+    "ru": "Томатный соус, сочное лечо, нежная страчателла, руккола и бальзамический крем.",
+    "kk": "Қызанақ тұздығы, шырынды лечо, нәзік страчателла ірімшігі, руккола және бальзамик кремі.",
+    "en": "Tomato sauce, juicy lecho peppers, delicate stracciatella cheese, arugula and balsamic cream."
+   }
+  },
+  {
+   "id": "pizza-chicken-tomato",
+   "category": "pizza",
+   "price": 3790,
+   "photo": "pizza-chicken-tomato",
+   "name": {
+    "ru": "Курица и томаты",
+    "kk": "Тауық еті мен қызанақ",
+    "en": "Chicken and tomato"
+   },
+   "desc": {
+    "ru": "Курица су-вид, моцарелла, сливочный соус, свежие томаты, руккола.",
+    "kk": "Су-вид тауық еті, моцарелла, кілегейлі тұздық, балғын қызанақ, руккола.",
+    "en": "Sous-vide chicken, mozzarella, creamy sauce, fresh tomatoes, arugula."
+   }
+  },
+  {
+   "id": "pizza-meatballs",
+   "category": "pizza",
+   "price": 3990,
+   "photo": "pizza-meatballs",
+   "name": {
+    "ru": "Пицца с митболами",
+    "kk": "Ет түйірлері қосылған пицца",
+    "en": "Meatball pizza"
+   },
+   "desc": {
+    "ru": "Митболы из курицы и говядины, моцарелла, томатно-сливочный соус, томаты и пармезан.",
+    "kk": "Тауық және сиыр етінен дайындалған ет түйірлері, моцарелла, қызанақ-кілегей тұздығы, қызанақ және пармезан.",
+    "en": "Chicken and beef meatballs, mozzarella, creamy tomato sauce, tomatoes and parmesan."
+   }
+  },
+  {
+   "id": "pizza-shrimp",
+   "category": "pizza",
+   "price": 4190,
+   "photo": "pizza-shrimp",
+   "name": {
+    "ru": "Пицца с креветками",
+    "kk": "Ашаян қосылған пицца",
+    "en": "Shrimp pizza"
+   },
+   "desc": {
+    "ru": "Сочные креветки, соус песто, томаты черри, моцарелла, руккола и бальзамический крем.",
+    "kk": "Сөлді асшаяндар, песто тұздығы, черри қызанақтары, моцарелла, руккола және бальзамды иісмай.",
+    "en": "Juicy shrimp, pesto, cherry tomatoes, mozzarella, arugula and balsamic glaze."
+   }
+  },
+  {
+   "id": "pizza-strawberry-gorgonzola",
+   "category": "pizza",
+   "price": 3990,
+   "photo": "pizza-strawberry-gorgonzola",
+   "name": {
+    "ru": "Клубника и горгонзола",
+    "kk": "Құлпынай мен горгонзола",
+    "en": "Strawberry and gorgonzola"
+   },
+   "desc": {
+    "ru": "Сливочный соус, моцарелла и горгонзола, свежая клубника, грецкий орех, мёд и бальзамик.",
+    "kk": "Кілегейлі тұздық, моцарелла және горгонзола, балғын құлпынай, грек жаңғағы, бал және бальзамик.",
+    "en": "Creamy sauce, mozzarella and gorgonzola, fresh strawberries, walnuts, honey and balsamic."
+   }
+  },
+  {
+   "id": "pizza-cheese",
+   "category": "pizza",
+   "price": 3690,
+   "photo": "pizza-cheese",
+   "name": {
+    "ru": "Сырная",
+    "kk": "Ірімшікті",
+    "en": "Cheese pizza"
+   },
+   "desc": {
+    "ru": "Микс сыров: моцарелла, чеддер, дор блю и пармезан, сливочный соус, руккола и фисташки.",
+    "kk": "Моцарелла, чеддер, дор блю және пармезан ірімшіктерінің қоспасы, кілегейлі тұздық, руккола және пісте.",
+    "en": "A blend of mozzarella, cheddar, Dorblu and parmesan, creamy sauce, arugula and pistachios."
+   }
+  },
+  {
+   "id": "pizza-truffle-mushroom",
+   "category": "pizza",
+   "price": 3790,
+   "photo": "pizza-truffle-mushroom",
+   "name": {
+    "ru": "Грибная с трюфелем",
+    "kk": "Трюфель қосылған саңырауқұлақты",
+    "en": "Mushroom and truffle pizza"
+   },
+   "desc": {
+    "ru": "Микс грибов, моцарелла, сливочный соус, трюфельная паста, пармезан и бальзамический крем.",
+    "kk": "Саңырауқұлақтар қоспасы, моцарелла, кілегейлі тұздық, трюфель пастасы, пармезан және бальзамді иісмай.",
+    "en": "Mushroom mix, mozzarella, creamy sauce, truffle paste, parmesan and balsamic glaze."
+   }
+  },
+  {
+   "id": "pizza-carbonara",
+   "category": "pizza",
+   "price": 3990,
+   "photo": "pizza-carbonara",
+   "badges": [
+    "hit"
+   ],
+   "name": {
+    "ru": "Карбонара",
+    "kk": "Карбонара",
+    "en": "Carbonara"
+   },
+   "desc": {
+    "ru": "Говяжья солонина, моцарелла, сливочный соус и соус голландез с пармезаном и петрушкой.",
+    "kk": "Сиыр сүрсүбесі, моцарелла, кілегейлі тұздық және пармезан мен ақжелкен қосылған голландез тұздығы.",
+    "en": "Beef pastrami, mozzarella, creamy sauce and hollandaise with parmesan and parsley."
+   }
+  },
+  {
+   "id": "spinach-waffles-with-salmon-and-poached-egg",
+   "category": "breakfast",
+   "price": 3890,
+   "name": {
+    "ru": "Шпинатные вафли с лососем и яйцом пашот",
+    "kk": "Ақсерке мен пашот жұмыртқасы қосылған  асжапырақ вафлилері",
+    "en": "Spinach waffles with salmon and poached egg"
+   },
+   "desc": {
+    "ru": "Зелёные вафли со слабосолёным лососем, нежным яйцом пашот, кремом из авокадо и соусом голландез.",
+    "kk": "Жасыл вафлилер жеңіл тұздалған ақсерке, нәзік пашот жұмыртқасы, авокадо кремімен және голландез тұздығы.",
+    "en": "Green waffles with lightly salted salmon, a delicate poached egg, avocado cream and hollandaise sauce."
+   }
+  },
+  {
+   "id": "american-breakfast",
+   "category": "breakfast",
+   "price": 4290,
+   "name": {
+    "ru": "Американский завтрак",
+    "kk": "Америкалық таңғы ас",
+    "en": "American breakfast"
+   },
+   "desc": {
+    "ru": "Сытный завтрак: яичница, колбаски, фасоль в соусе, грибы, картофель и хлеб с травами.",
+    "kk": "Жұмыртқалар, шұжықтар, тұздықтағы бұршақ, саңырауқұлақтар, картоп және шөптер қосылған нанмен тойымды таңғы ас.",
+    "en": "A hearty breakfast with eggs, sausages, beans in sauce, mushrooms, potatoes and herb bread."
+   }
+  },
+  {
+   "id": "potato-waffles-with-beef-pastrami-and-egg",
+   "category": "breakfast",
+   "price": 2890,
+   "name": {
+    "ru": "Картофельные вафли с говяжьей солониной и яйцом",
+    "kk": "Сиыр сүрсүбесі мен жұмыртқа қосылған картоп вафлилері",
+    "en": "Potato waffles with beef pastrami and egg"
+   },
+   "desc": {
+    "ru": "Хрустящие картофельные вафли с говяжьей солониной, яйцом и сливочным соусом голландез.",
+    "kk": "Сиыр сүрсүбесі қосылған қытырлақ картоп вафлилері, жұмыртқа және кілегейлі голландез тұздығы.",
+    "en": "Crispy potato waffles with beef pastrami, egg and creamy hollandaise sauce."
+   }
+  },
+  {
+   "id": "scrambled-eggs-with-salmon-and-vegetables",
+   "category": "breakfast",
+   "price": 3890,
+   "name": {
+    "ru": "Скрэмбл с лососем и овощами",
+    "kk": "Ақсерке пен көкөністер қосылған скрембл",
+    "en": "Scrambled eggs with salmon and vegetables"
+   },
+   "desc": {
+    "ru": "Яйца скрэмбл, слабосолёный лосось, овощной микс, творожный сыр.",
+    "kk": "Скрэмбл жұмыртқасы, жеңіл тұздалған ақсерке, көкөніс қоспасы, сүзбелі ірімшік.",
+    "en": "Scrambled eggs, lightly salted salmon, mixed vegetables, cream cheese."
+   }
+  },
+  {
+   "id": "shrimp-omelette",
+   "category": "breakfast",
+   "price": 4190,
+   "name": {
+    "ru": "Омлет с креветками",
+    "kk": "Асшаян қосылған омлет",
+    "en": "Shrimp omelette"
+   },
+   "desc": {
+    "ru": "Нежный воздушный омлет, обжаренные креветки, авокадо, руккола, крем из «Фетаксы», розовые томаты, бальзамический крем-соус.",
+    "kk": "Нәзік жеңіл омлет, қуырылған асшаяндар, авокадо, руккола, «Фетакса» кремі, қызғылт қызанақтар, бальзамик кремі, тұздығы.",
+    "en": "A light, fluffy omelette with sautéed shrimp, avocado, arugula, Fetaxa cream, pink tomatoes and balsamic cream sauce."
+   }
+  },
+  {
+   "id": "omelette-with-sausages-and-tashkent-tomatoes",
+   "category": "breakfast",
+   "price": 4190,
+   "name": {
+    "ru": "Омлет с колбасками и ташкентскими томатами",
+    "kk": "Шұжықтар мен ташкент қызанақтары қосылған омлет",
+    "en": "Omelette with sausages and Tashkent tomatoes"
+   },
+   "desc": {
+    "ru": "Нежный омлет с сочными колбасками, спелыми томатами, рукколой и ароматным соусом песто.",
+    "kk": "Жұмсақ омлет шырынды шұжықтармен, жаңа піскен қызанақпен, рукколамен және хош иісті песто тұздығымен ұсынылады.",
+    "en": "A soft omelette served with juicy sausages, ripe tomatoes, arugula and fragrant pesto."
+   }
+  },
+  {
+   "id": "shakshuka-with-poached-egg-and-fetaxa-cream",
+   "category": "breakfast",
+   "price": 2690,
+   "name": {
+    "ru": "Шакшука с яйцом пашот и кремом из «Фетаксы»",
+    "kk": "Пашот жұмыртқасы мен «Фетакса» кремі қосылған шакшука",
+    "en": "Shakshuka with poached egg and Fetaxa cream"
+   },
+   "desc": {
+    "ru": "Пряная шакшука с яйцом пашот, кремом из «Фетаксы», зеленью и свежим хлебом.",
+    "kk": "Пашот жұмыртқасымен татымды шакшука, «Фетакса» кремі, көк шөптер және жаңа піскен нан.",
+    "en": "Spiced shakshuka with a poached egg, Fetaxa cream, fresh herbs and freshly baked bread."
+   }
+  },
+  {
+   "id": "breakfast-with-chicken",
+   "category": "breakfast",
+   "price": 3490,
+   "name": {
+    "ru": "Завтрак с курицей",
+    "kk": "Тауық етімен таңғы ас",
+    "en": "Breakfast with chicken"
+   },
+   "desc": {
+    "ru": "Обжаренное куриное филе, брокколи, яйцо пашот, кабачковые вафли, томаты и сметана.",
+    "kk": "Қуырылған тауық сүбесі, брокколи, пашот жұмыртқасы, кәді вафлилері, қызанақ және қаймақ.",
+    "en": "Grilled chicken fillet, broccoli, poached egg, zucchini waffles, tomatoes and sour cream."
+   }
+  },
+  {
+   "id": "cottage-cheese-pancakes-with-custard",
+   "category": "breakfast",
+   "price": 2590,
+   "name": {
+    "ru": "Сырники с заварным кремом",
+    "kk": "Қайнатылған крем қосылған сүзбелі құймақтар",
+    "en": "Cottage cheese pancakes with custard"
+   },
+   "desc": {
+    "ru": "Нежные сырники с ванильным заварным кремом, ягодным гелем и фисташками.",
+    "kk": "Ванильді қайнатылған креммен нәзік сүзбелі құймақтар, жидек гелі және пістемен.",
+    "en": "Tender cottage cheese pancakes with vanilla custard, berry gel and pistachios."
+   }
+  },
+  {
+   "id": "rice-porridge-with-berries-and-salted-caramel",
+   "category": "breakfast",
+   "price": 1890,
+   "name": {
+    "ru": "Рисовая каша с ягодами и солёной карамелью",
+    "kk": "Жидектер мен тұзды карамель қосылған күріш ботқасы",
+    "en": "Rice porridge with berries and salted caramel"
+   },
+   "desc": {
+    "ru": "Классическая рисовая каша на молоке с ягодами, сливочным маслом, бриошью и солёной карамелью.",
+    "kk": "Жидектер, сары май, бриошь және тұзды карамель қосылған сүтке дайындалған классикалық күріш ботқасы.",
+    "en": "Classic milk rice porridge with berries, butter, brioche and salted caramel."
+   }
+  },
+  {
+   "id": "oatmeal-with-granola-and-cherry",
+   "category": "breakfast",
+   "price": 1890,
+   "name": {
+    "ru": "Овсяная каша с гранолой и вишней",
+    "kk": "Гранола мен шие қосылған сұлы ботқасы",
+    "en": "Oatmeal with granola and cherry"
+   },
+   "desc": {
+    "ru": "Овсяная каша на молоке с хрустящей гранолой, ягодами, вишнёвым гелем и бриошью.",
+    "kk": "Жидектермен, шие гелі және бриошь қосылып қытырлақ граноламен сүтке дайындалған сұлы ботқасы.",
+    "en": "Milk oatmeal with crunchy granola, berries, cherry gel and brioche."
+   }
+  },
+  {
+   "id": "buckwheat-porridge-with-berries-and-coconut-milk",
+   "category": "breakfast",
+   "price": 1890,
+   "name": {
+    "ru": "Гречневая каша с ягодами и кокосовым молоком",
+    "kk": "Жидектер мен кокос сүті қосылған қарақұмық ботқасы",
+    "en": "Buckwheat porridge with berries and coconut milk"
+   },
+   "desc": {
+    "ru": "Ароматная гречневая каша на кокосовом молоке с ягодами, вишнёвым гелем и бриошью.",
+    "kk": "Кокос сүтімен хош иісті қарақұмық ботқасы, жидектер, шие гелі және бриошь.",
+    "en": "Fragrant buckwheat porridge with coconut milk, berries, cherry gel and brioche."
+   }
+  },
+  {
+   "id": "sweet-waffles-with-ice-cream-and-caramel",
+   "category": "breakfast",
+   "price": 2200,
+   "name": {
+    "ru": "Сладкие вафли с мороженым и карамелью",
+    "kk": "Балмұздақ пен карамель қосылған тәтті вафлилер",
+    "en": "Sweet waffles with ice cream and caramel"
+   },
+   "desc": {
+    "ru": "Тёплые вафли с мороженым, карамельным соусом, клубникой и грецким орехом.",
+    "kk": "Балмұздақпен жылы вафлилер, карамель тұздығы, құлпынай және грек жаңғағы.",
+    "en": "Warm waffles with ice cream, caramel sauce, strawberries and walnuts."
+   }
+  },
+  {
+   "id": "buckwheat-porridge-with-mushrooms-and-truffle",
+   "category": "breakfast",
+   "price": 3190,
+   "name": {
+    "ru": "Гречневая каша с грибами и трюфелем",
+    "kk": "Саңырауқұлақ пен трюфель қосылған қарақұмық ботқасы",
+    "en": "Buckwheat porridge with mushrooms and truffle"
+   },
+   "desc": {
+    "ru": "Густая гречневая каша на курином бульоне со сливками, грибами, яйцом и лёгким трюфельным ароматом.",
+    "kk": "Тауық сорпасында кілегеймен дайындалған қою қарақұмық ботқасы, саңырауқұлақтар, жұмыртқа және жеңіл трюфель дәмі.",
+    "en": "Creamy buckwheat porridge cooked in chicken broth, with mushrooms, egg and a hint of truffle."
+   }
+  },
+  {
+   "id": "panuozzo-with-lightly-salted-salmon",
+   "category": "panuozzo",
+   "price": 2890,
+   "name": {
+    "ru": "Пануоццо со слабосолёным лососем",
+    "kk": "Жеңіл тұздалған ақсерке қосылған пануоццо",
+    "en": "Panuozzo with lightly salted salmon"
+   },
+   "desc": {
+    "ru": "Моцарелла, крем из «Фетаксы», лосось, руккола, песто и зелёный соус в хрустящем тесте.",
+    "kk": "Моцарелла, «Фетакса» кремі, ақсерке, руккола, песто және қытырлақ қамырдағы жасыл тұздық.",
+    "en": "Mozzarella, Fetaxa cream, salmon, arugula, pesto and green sauce in crispy bread."
+   }
+  },
+  {
+   "id": "panuozzo-with-sweet-chili-shrimp",
+   "category": "panuozzo",
+   "price": 2890,
+   "name": {
+    "ru": "Пануоццо с креветками Sweet Chili",
+    "kk": "Sweet Chili асшаянымен қосылған пануоццо",
+    "en": "Panuozzo with Sweet Chili shrimp"
+   },
+   "desc": {
+    "ru": "Обжаренные креветки, моцарелла, томаты, руккола, соус Sweet Chili и печёный чеснок.",
+    "kk": "Қуырылған асшаяндар, моцарелла, қызанақ, руккола, Sweet Chili тұздығы және пеште пісірілген сарымсақ.",
+    "en": "Sautéed shrimp, mozzarella, tomatoes, arugula, sweet chili sauce and roasted garlic."
+   }
+  },
+  {
+   "id": "panuozzo-with-lecho-and-stracciatella",
+   "category": "panuozzo",
+   "price": 3090,
+   "name": {
+    "ru": "Пануоццо с лечо и страчателлой",
+    "kk": "Лечо мен страчателла қосылған пануоццо",
+    "en": "Panuozzo with lecho and stracciatella"
+   },
+   "desc": {
+    "ru": "Сочное лечо, нежная страчателла, руккола, томатный соус и бальзамический крем.",
+    "kk": "Шырынды лечо, нәзік страчателла, руккола, қызанақ тұздығы және бальзамик кремі.",
+    "en": "Juicy lecho, delicate stracciatella, arugula, tomato sauce and balsamic cream."
+   }
+  },
+  {
+   "id": "panuozzo-with-braised-beef",
+   "category": "panuozzo",
+   "price": 3190,
+   "name": {
+    "ru": "Пануоццо с томлёной говядиной",
+    "kk": "Бұқтырылған сиыр етімен пануоццо",
+    "en": "Panuozzo with braised beef"
+   },
+   "desc": {
+    "ru": "Томлёная говядина, моцарелла, томаты, руккола, маринованный лук и бальзамический крем.",
+    "kk": "Бұқтырылған сиыр еті, моцарелла, қызанақ, руккола, маринадталған пияз және бальзамик кремі.",
+    "en": "Braised beef, mozzarella, tomatoes, arugula, pickled onions and balsamic cream."
+   }
+  },
+  {
+   "id": "panuozzo-with-chicken-and-mushrooms",
+   "category": "panuozzo",
+   "price": 2990,
+   "name": {
+    "ru": "Пануоццо с курицей и грибами",
+    "kk": "Тауық еті мен саңырауқұлақ қосылған пануоццо",
+    "en": "Panuozzo with chicken and mushrooms"
+   },
+   "desc": {
+    "ru": "Курица су-вид, микс грибов, моцарелла, зелёный соус и лёгкий трюфельный аромат.",
+    "kk": "Су-вид әдісімен дайындалған тауық еті, саңырауқұлақтар қоспасы, моцарелла, жасыл тұздық және жеңіл трюфель дәмі.",
+    "en": "Sous-vide chicken, mixed mushrooms, mozzarella, green sauce and a hint of truffle."
+   }
+  },
+  {
+   "id": "shrimp-pasta",
+   "category": "pasta",
+   "price": 3990,
+   "name": {
+    "ru": "Паста с креветками",
+    "kk": "Асшаян қосылған паста",
+    "en": "Shrimp pasta"
+   },
+   "desc": {
+    "ru": "Креветки, томаты черри, соус биск, сливки, петрушка, пармезан.",
+    "kk": "Асшаяндар, черри қызанақтары, биск тұздығы, кілегей, ақжелкен, пармезан.",
+    "en": "Shrimp, cherry tomatoes, bisque sauce, cream, parsley, parmesan."
+   }
+  },
+  {
+   "id": "pasta-with-braised-beef",
+   "category": "pasta",
+   "price": 4190,
+   "name": {
+    "ru": "Паста с томлёным мясом",
+    "kk": "Бұқтырылған ет қосылған паста",
+    "en": "Pasta with braised beef"
+   },
+   "desc": {
+    "ru": "Томлёное мясо, копчёный казы, соус демиглас, сливки, петрушка.",
+    "kk": "Бұқтырылған ет, ысталған қазы, демиглас тұздығы, кілегей, ақжелкен.",
+    "en": "Braised beef, smoked kazy (horse sausage), demi-glace sauce, cream, parsley."
+   }
+  },
+  {
+   "id": "spaghetti-bolognese",
+   "category": "pasta",
+   "price": 3990,
+   "name": {
+    "ru": "Спагетти болоньезе",
+    "kk": "Болоньезе спагеттиі",
+    "en": "Spaghetti Bolognese"
+   },
+   "desc": {
+    "ru": "Мясной соус болоньезе, томатный соус, базилик, пармезан, томаты.",
+    "kk": "Етті болоньезе тұздығы, қызанақ тұздығы, базилик, пармезан, қызанақтар.",
+    "en": "Rich Bolognese meat sauce, tomato sauce, basil, parmesan, tomatoes."
+   }
+  },
+  {
+   "id": "pasta-arrabbiata",
+   "category": "pasta",
+   "price": 3990,
+   "name": {
+    "ru": "Паста арабьята",
+    "kk": "Арабьята пастасы",
+    "en": "Pasta arrabbiata"
+   },
+   "desc": {
+    "ru": "Томаты черри, овощное лечо, томатный соус, перец чили, крем из «Фетаксы», петрушка, пармезан.",
+    "kk": "Черри қызанақтары, көкөніс лечосы, қызанақ тұздығы, чили бұрышы, «Фетакса» кремі, ақжелкен, пармезан.",
+    "en": "Cherry tomatoes, vegetable lecho, tomato sauce, chili pepper, Fetaxa cream, parsley, parmesan."
+   },
+   "tags": [
+    "spicy"
+   ]
+  },
+  {
+   "id": "fettuccine-alfredo",
+   "category": "pasta",
+   "price": 3990,
+   "name": {
+    "ru": "Фетучини Альфредо",
+    "kk": "Фетучини Альфредо",
+    "en": "Fettuccine Alfredo"
+   },
+   "desc": {
+    "ru": "Курица су-вид, грибы, сливки, петрушка, мусс из пармезана.",
+    "kk": "Су-вид тауық еті, саңырауқұлақтар, кілегей, ақжелкен, пармезан муссы.",
+    "en": "Sous-vide chicken, mushrooms, cream, parsley, parmesan mousse."
+   }
+  },
+  {
+   "id": "crispy-chicken-salad",
+   "category": "salads",
+   "price": 2990,
+   "name": {
+    "ru": "Салат с цыплёнком",
+    "kk": "Балапан етімен салат",
+    "en": "Crispy chicken salad"
+   },
+   "desc": {
+    "ru": "Хрустящее куриное бедро в панировке, микс салатных листьев, вяленые томаты, гренки и зелёный соус с пармезаном.",
+    "kk": "Ұнтаққа аунатылған қытырлақ балапанның сан еті, салат жапырақтарының қоспасы, қақталған қызанақ, қуырылған нандар және пармезан қосылған жасыл тұздық.",
+    "en": "Crispy breaded chicken thigh, mixed salad leaves, sun-dried tomatoes, croutons and green parmesan dressing."
+   }
+  },
+  {
+   "id": "shrimp-salad-with-pickled-cucumbers",
+   "category": "salads",
+   "price": 3250,
+   "name": {
+    "ru": "Салат с креветками и маринованными огурцами",
+    "kk": "Маринадталған қияр мен асшаян қосылған салат",
+    "en": "Shrimp salad with pickled cucumbers"
+   },
+   "desc": {
+    "ru": "Обжаренные креветки с ароматом чеснока, микс салатных листьев, томаты черри, чипсы из пармезана, цитрусовый соус и мусс из пармезана.",
+    "kk": "Қуырылған асшаяндар, сарымсақ хош иісі, салат жапырақтарының қоспасы, черри қызанақтары, пармезан чипстері, цитруст тұздық және пармезан муссы.",
+    "en": "Garlic-sautéed shrimp, mixed salad leaves, cherry tomatoes, parmesan chips, citrus dressing and parmesan mousse."
+   }
+  },
+  {
+   "id": "vegetable-salad-with-seeds",
+   "category": "salads",
+   "price": 2590,
+   "name": {
+    "ru": "Овощной салат с семечками",
+    "kk": "Көкөніс пен дәндер қосылған салат",
+    "en": "Vegetable salad with seeds"
+   },
+   "desc": {
+    "ru": "Свежие овощи, микс салатных листьев, хрустящие семечки, крем из «Фетаксы», ароматное масло и песто.",
+    "kk": "Балғын көкөністер, салат жапырақтарының қоспасы, қытырлақ дәндер, «Фетакса» кремі, хош иісті май және песто.",
+    "en": "Fresh vegetables, mixed salad leaves, crunchy seeds, Fetaxa cream, aromatic oil and pesto."
+   }
+  },
+  {
+   "id": "tomato-and-stracciatella-salad",
+   "category": "salads",
+   "price": 3390,
+   "name": {
+    "ru": "Салат с томатами и страчателлой",
+    "kk": "Қызанақ пен страчателла қосылған салат",
+    "en": "Tomato and stracciatella salad"
+   },
+   "desc": {
+    "ru": "Ассорти сочных томатов, нежная страчателла, хрустящие баклажаны, руккола, базилик, азиатский соус и гренки с пармезаном.",
+    "kk": "Шырынды қызанақтардың ассортиі, нәзік страчателла ірімшігі, қытырлақ баялдылар, руккола, базилик, азиялық тұздық және пармезанмен кептірілген нан.",
+    "en": "Assorted ripe tomatoes, delicate stracciatella, crispy eggplant, arugula, basil, Asian-style dressing and parmesan crostini."
+   }
+  },
+  {
+   "id": "salmon-and-avocado-bowl",
+   "category": "salads",
+   "price": 3690,
+   "name": {
+    "ru": "Боул с лососем и авокадо",
+    "kk": "Ақсерке мен авокадо қосылған боул",
+    "en": "Salmon and avocado bowl"
+   },
+   "desc": {
+    "ru": "Слабосолёный лосось, варёное яйцо, авокадо, шпинат, брокколи, зелёный горошек и свежий цитрусовый соус.",
+    "kk": "Жеңіл тұздалған ақсерке, піскен жұмыртқа, авокадо, асжапырақ, брокколи, жасыл бұршақ және балғын цитрусты тұздық.",
+    "en": "Lightly salted salmon, boiled egg, avocado, spinach, broccoli, green peas and a fresh citrus dressing."
+   }
+  },
+  {
+   "id": "chicken-soup-with-meatballs",
+   "category": "soups",
+   "price": 2190,
+   "name": {
+    "ru": "Куриный суп с фрикадельками",
+    "kk": "Ет түйірлерімен тауық сорпасы",
+    "en": "Chicken soup with meatballs"
+   },
+   "desc": {
+    "ru": "Лёгкий куриный бульон с фрикадельками, лапшой, овощами и яйцом.",
+    "kk": "Ет түйірлері, кеспе, көкөністер және жұмыртқа қосылған нәзік тауық сорпасы.",
+    "en": "Light chicken broth with meatballs, noodles, vegetables and egg."
+   }
+  },
+  {
+   "id": "borscht-with-braised-beef",
+   "category": "soups",
+   "price": 2590,
+   "name": {
+    "ru": "Борщ с томлёным мясом",
+    "kk": "Бұқтырылған ет қосылған борщ",
+    "en": "Borscht with braised beef"
+   },
+   "desc": {
+    "ru": "Наваристый борщ с томлёным мясом, фасолью в томатном соусе и печёным чесноком; подаётся с хлебом с говяжьей солониной и творожным сыром.",
+    "kk": "Бұқтырылған ет пен қызанақ тұздығындағы бұршақ қосылған қою борщ, пеште піскен сарымсақ, сиыр сүрсүбесінен дайындалған және сүзбелі ірімшік жағылған нанмен ұсынылады.",
+    "en": "Rich borscht with braised beef, beans in tomato sauce and roasted garlic, served with bread topped with beef pastrami and cream cheese."
+   }
+  },
+  {
+   "id": "cream-of-mushroom-soup",
+   "category": "soups",
+   "price": 2190,
+   "name": {
+    "ru": "Грибной крем-суп",
+    "kk": "Саңырауқұлақ крем-сорпасы",
+    "en": "Cream of mushroom soup"
+   },
+   "desc": {
+    "ru": "Нежный грибной крем-суп с хрустящими гренками, муссом из пармезана и петрушкой.",
+    "kk": "Саңырауқұлақтан дайындалған нәзік крем-сорпа, қытырлақ қуырылған нандар, пармезан муссы және ақжелкен.",
+    "en": "Silky mushroom cream soup with crunchy croutons, parmesan mousse and parsley."
+   }
+  },
+  {
+   "id": "okroshka",
+   "category": "soups",
+   "price": 2790,
+   "name": {
+    "ru": "Окрошка",
+    "kk": "Окрошка",
+    "en": "Okroshka"
+   },
+   "desc": {
+    "ru": "Айран, сметана, минеральная вода, томлёное мясо, редис, огурцы, зелень, яйцо, картофель.",
+    "kk": "Айран, қаймақ, минералды су, бұқтырылған ет, шалғам, қияр, көк шөптер, жұмыртқа, картоп.",
+    "en": "Ayran, sour cream, mineral water, braised beef, radish, cucumber, fresh herbs, egg, potato."
+   }
+  },
+  {
+   "id": "beef-cutlet-with-mashed-potatoes",
+   "category": "hot",
+   "price": 3890,
+   "name": {
+    "ru": "Котлета из говядины с картофельным пюре",
+    "kk": "Картоп езбесімен сиыр етінен котлет",
+    "en": "Beef cutlet with mashed potatoes"
+   },
+   "desc": {
+    "ru": "Сочная говяжья котлета с нежным картофельным пюре, соусом демиглас, жареным луком и маринованными огурцами.",
+    "kk": "Нәзік картоп езбесімен сөлді сиыр котлеті, демиглас тұздығы, қуырылған пияз және маринадталған қияр.",
+    "en": "Juicy beef cutlet with creamy mashed potatoes, demi-glace sauce, fried onions and pickled cucumbers."
+   }
+  },
+  {
+   "id": "salmon-and-shrimp-cutlet-with-rice",
+   "category": "hot",
+   "price": 4290,
+   "name": {
+    "ru": "Котлета из лосося и креветок с рисом",
+    "kk": "Күріш қосылған ақсерке мен асшаяннан котлет",
+    "en": "Salmon and shrimp cutlet with rice"
+   },
+   "desc": {
+    "ru": "Нежная рыбная котлета из лосося и креветок с рисом, цукини, зелёным горошком и сливочным соусом биск.",
+    "kk": "Күріш қосылған нәзік ақсерке мен асшаяннан дайындалған балықты котлет, цукини, жасыл бұршақ және кілегейлі-биск тұздығы.",
+    "en": "Delicate salmon and shrimp fish cake with rice, zucchini, green peas and creamy bisque sauce."
+   }
+  },
+  {
+   "id": "chicken-cutlet-with-lecho",
+   "category": "hot",
+   "price": 3590,
+   "name": {
+    "ru": "Куриная котлета с лечо",
+    "kk": "Қолдың лечосы қосылған тауық котлеті",
+    "en": "Chicken cutlet with lecho"
+   },
+   "desc": {
+    "ru": "Рубленая куриная котлета с ароматным лечо, томатным соусом, пармезаном и свежей зеленью.",
+    "kk": "Қолдың тауық котлеті хош иісті лечо, қызанақ тұздығы, пармезан және балғын көк шөптер.",
+    "en": "Hand-chopped chicken cutlet with fragrant lecho, tomato sauce, parmesan and fresh herbs."
+   }
+  },
+  {
+   "id": "chicken-strips",
+   "category": "sides",
+   "price": 1990,
+   "name": {
+    "ru": "Куриные стрипсы",
+    "kk": "Тауық стрипстері",
+    "en": "Chicken strips"
+   },
+   "desc": {
+    "ru": "Сочные кусочки куриного филе в хрустящей панировке.",
+    "kk": "Қытырлақ ұнтақтағы шырынды тауық сүбесінің тілімдері.",
+    "en": "Juicy chicken fillet strips in crispy breading."
+   }
+  },
+  {
+   "id": "french-fries",
+   "category": "sides",
+   "price": 1290,
+   "name": {
+    "ru": "Картофель фри",
+    "kk": "Картоп фри",
+    "en": "French fries"
+   },
+   "desc": {
+    "ru": "Золотистый хрустящий картофель фри.",
+    "kk": "Алтын қытырлақ қабықты қуырылған картоп тілімдері.",
+    "en": "Golden, crispy french fries."
+   }
+  },
+  {
+   "id": "sweet-potato-fries",
+   "category": "sides",
+   "price": 2090,
+   "name": {
+    "ru": "Батат фри",
+    "kk": "Батат фри",
+    "en": "Sweet potato fries"
+   },
+   "desc": {
+    "ru": "Хрустящие ломтики сладкого батата во фритюре.",
+    "kk": "Қытырлақ етіп қуырылған тәтті батат тілімдері.",
+    "en": "Crispy sweet potato fries."
+   }
+  },
+  {
+   "id": "mashed-potatoes",
+   "category": "sides",
+   "price": 1590,
+   "name": {
+    "ru": "Картофельное пюре",
+    "kk": "Картоп езбесі",
+    "en": "Mashed potatoes"
+   },
+   "desc": {
+    "ru": "Нежное картофельное пюре со сливочным маслом.",
+    "kk": "Сары май қосылған нәзік картоп езбесі.",
+    "en": "Creamy mashed potatoes with butter."
+   }
+  },
+  {
+   "id": "rice",
+   "category": "sides",
+   "price": 1590,
+   "name": {
+    "ru": "Рис",
+    "kk": "Күріш",
+    "en": "Rice"
+   },
+   "desc": {
+    "ru": "Рассыпчатый отварной рис.",
+    "kk": "Үлпілдек болып пісірілген ақ күріш.",
+    "en": "Fluffy steamed rice."
+   }
+  },
+  {
+   "id": "buckwheat",
+   "category": "sides",
+   "price": 1590,
+   "name": {
+    "ru": "Гречка",
+    "kk": "Қарақұмық",
+    "en": "Buckwheat"
+   },
+   "desc": {
+    "ru": "Рассыпчатая гречка со сливочным маслом.",
+    "kk": "Сары май қосылған үлпілдек қарақұмық.",
+    "en": "Fluffy buckwheat with butter."
+   }
+  },
+  {
+   "id": "brioche",
+   "category": "bread",
+   "price": 590,
+   "name": {
+    "ru": "Бриошь",
+    "kk": "Бриошь",
+    "en": "Brioche"
+   },
+   "desc": {
+    "ru": "Мягкая сливочная булочка с лёгкой сладостью.",
+    "kk": "Жеңіл тәтті дәмі бар жұмсақ кілегейлі нан.",
+    "en": "Soft, buttery bread with a touch of sweetness."
+   }
+  },
+  {
+   "id": "herb-bread",
+   "category": "bread",
+   "price": 590,
+   "name": {
+    "ru": "Хлеб с травами",
+    "kk": "Шөптер қосылған нан",
+    "en": "Herb bread"
+   },
+   "desc": {
+    "ru": "Ароматный хлеб с пряными травами и хрустящей корочкой.",
+    "kk": "Дәмдеуіш шөптер қосылған, қытырлақ қабықты хош иісті нан.",
+    "en": "Fragrant bread with herbs and a crispy crust."
+   }
+  },
+  {
+   "id": "napoleon",
+   "category": "desserts",
+   "price": 2590,
+   "name": {
+    "ru": "Наполеон",
+    "kk": "Наполеон",
+    "en": "Napoleon"
+   },
+   "desc": {
+    "ru": "Классический многослойный десерт из лёгкого хрустящего теста и ванильного заварного крема.",
+    "kk": "Жеңіл қытырлақ қамырдан және ванильді қайнатылған кремнен дайындалған классикалық көпқабатты тіскебасар.",
+    "en": "Classic layered dessert of light, flaky pastry and vanilla custard."
+   }
+  },
+  {
+   "id": "cheesecake",
+   "category": "desserts",
+   "price": 2590,
+   "name": {
+    "ru": "Чизкейк",
+    "kk": "Чизкейк",
+    "en": "Cheesecake"
+   },
+   "desc": {
+    "ru": "Классический чизкейк с бархатистой текстурой и насыщенным сливочным вкусом.",
+    "kk": "Барқыттай нәзік құрылымы мен қанық кілегейлі дәмі бар классикалық чизкейк.",
+    "en": "Classic cheesecake with a velvety texture and rich creamy flavor."
+   }
+  },
+  {
+   "id": "apple-strudel-with-ice-cream",
+   "category": "desserts",
+   "price": 2590,
+   "name": {
+    "ru": "Яблочный штрудель с мороженым",
+    "kk": "Балмұздақпен алма штруделі",
+    "en": "Apple strudel with ice cream"
+   },
+   "desc": {
+    "ru": "Тёплый штрудель с яблочной начинкой, подаётся с шариком мороженого.",
+    "kk": "Алма салмасы бар жылы штрудель, бір дөңгелек қасық балмұздақпен ұсынылады.",
+    "en": "Warm apple strudel served with a scoop of ice cream."
+   }
+  },
+  {
+   "id": "honey-cake",
+   "category": "desserts",
+   "price": 2590,
+   "name": {
+    "ru": "Медовик",
+    "kk": "Балды торты",
+    "en": "Honey cake"
+   },
+   "desc": {
+    "ru": "Мягкие медовые коржи с нежным кремом, пропитанные до идеальной нежности.",
+    "kk": "Нәзік крем жағылған жұмсақ бал қабаттары мінсіз жұмсақтыққа дейін сіңірілген тәтті нандар.",
+    "en": "Soft honey cake layers with delicate cream, soaked to perfect tenderness."
+   }
+  },
+  {
+   "id": "espresso",
+   "category": "coffee",
+   "price": 700,
+   "name": {
+    "ru": "Эспрессо",
+    "kk": "Эспрессо",
+    "en": "Espresso"
+   },
+   "desc": {
+    "ru": "Насыщенный ароматный кофе с плотным вкусом и яркими карамельными нотами.",
+    "kk": "Қою дәмі мен айқын карамель реңктері бар қанық және хош иісті кофе.",
+    "en": "Rich, aromatic coffee with a bold body and distinct caramel notes."
+   }
+  },
+  {
+   "id": "americano-350-ml",
+   "category": "coffee",
+   "price": 1000,
+   "name": {
+    "ru": "Американо (350 мл)",
+    "kk": "Американо (350 мл.)",
+    "en": "Americano (350 ml)"
+   },
+   "desc": {
+    "ru": "Эспрессо с горячей водой — мягкий и насыщенный кофейный вкус.",
+    "kk": "Ыстық сумен толықтырылған эспрессо - жұмсақ әрі қанық кофе дәмі.",
+    "en": "Espresso topped up with hot water for a smooth yet rich coffee taste."
+   }
+  },
+  {
+   "id": "americano-450-ml",
+   "category": "coffee",
+   "price": 1150,
+   "name": {
+    "ru": "Американо (450 мл)",
+    "kk": "Американо (450 мл.)",
+    "en": "Americano (450 ml)"
+   },
+   "desc": {
+    "ru": "Эспрессо с горячей водой — лёгкий, но насыщенный кофейный вкус.",
+    "kk": "Ыстық сумен толықтырылған эспрессо - жеңіл әрі қанық кофе дәмі.",
+    "en": "Espresso topped up with hot water for a light yet full coffee taste."
+   }
+  },
+  {
+   "id": "latte-350-ml",
+   "category": "coffee",
+   "price": 1400,
+   "name": {
+    "ru": "Латте (350 мл)",
+    "kk": "Латте (350 мл.)",
+    "en": "Latte (350 ml)"
+   },
+   "desc": {
+    "ru": "Эспрессо с большим количеством горячего молока и нежной молочной пенкой.",
+    "kk": "Көп мөлшердегі ыстық сүт пен нәзік сүт көбігі қосылған эспрессо.",
+    "en": "Espresso with plenty of steamed milk and a delicate layer of foam."
+   }
+  },
+  {
+   "id": "latte-450-ml",
+   "category": "coffee",
+   "price": 1550,
+   "name": {
+    "ru": "Латте (450 мл)",
+    "kk": "Латте (450 мл.)",
+    "en": "Latte (450 ml)"
+   },
+   "desc": {
+    "ru": "Эспрессо с большим количеством горячего молока и нежной молочной пенкой.",
+    "kk": "Көп мөлшердегі ыстық сүт пен нәзік сүт көбігі қосылған эспрессо.",
+    "en": "Espresso with plenty of steamed milk and a delicate layer of foam."
+   }
+  },
+  {
+   "id": "cappuccino-250-ml",
+   "category": "coffee",
+   "price": 1300,
+   "name": {
+    "ru": "Капучино (250 мл)",
+    "kk": "Капучино (250 мл.)",
+    "en": "Cappuccino (250 ml)"
+   },
+   "desc": {
+    "ru": "Сбалансированное сочетание эспрессо, молока и плотной молочной пены.",
+    "kk": "Эспрессо, сүт және айс негізіндегі қою сүт көбігінің теңдестірілген үйлесімі.",
+    "en": "A balanced blend of espresso, milk and dense milk foam."
+   }
+  },
+  {
+   "id": "cappuccino-350-ml",
+   "category": "coffee",
+   "price": 1400,
+   "name": {
+    "ru": "Капучино (350 мл)",
+    "kk": "Капучино (350 мл.)",
+    "en": "Cappuccino (350 ml)"
+   },
+   "desc": {
+    "ru": "Сбалансированное сочетание эспрессо, молока и плотной молочной пены.",
+    "kk": "Эспрессо, сүт және айс негізіндегі қою сүт көбігінің теңдестірілген үйлесімі.",
+    "en": "A balanced blend of espresso, milk and dense milk foam."
+   }
+  },
+  {
+   "id": "cappuccino-450-ml",
+   "category": "coffee",
+   "price": 1550,
+   "name": {
+    "ru": "Капучино (450 мл)",
+    "kk": "Капучино (450 мл.)",
+    "en": "Cappuccino (450 ml)"
+   },
+   "desc": {
+    "ru": "Сбалансированное сочетание эспрессо, молока и плотной молочной пены.",
+    "kk": "Эспрессо, сүт және айс негізіндегі қою сүт көбігінің теңдестірілген үйлесімі.",
+    "en": "A balanced blend of espresso, milk and dense milk foam."
+   }
+  },
+  {
+   "id": "raf-coffee-350-ml",
+   "category": "coffee",
+   "price": 1700,
+   "name": {
+    "ru": "Раф (350 мл)",
+    "kk": "Раф (350 мл.)",
+    "en": "Raf coffee (350 ml)"
+   },
+   "desc": {
+    "ru": "Нежный кофейный напиток на сливках.",
+    "kk": "Кілегей негізінде дайындалатын нәзік дәмді кофе сусыны.",
+    "en": "A silky coffee drink made with cream."
+   }
+  },
+  {
+   "id": "flat-white",
+   "category": "coffee",
+   "price": 1450,
+   "name": {
+    "ru": "Флэт уайт",
+    "kk": "Флэт уайт",
+    "en": "Flat white"
+   },
+   "desc": {
+    "ru": "Двойной эспрессо, бархатистое молоко и совсем немного пенки — яркий кофейный вкус.",
+    "kk": "Қос эспрессо, барқыттай сүт және аз мөлшердегі көбік - айқын кофе дәмі.",
+    "en": "Double espresso with velvety milk and just a touch of foam for a bold coffee flavour."
+   }
+  },
+  {
+   "id": "espresso-tonic",
+   "category": "specialty",
+   "price": 1800,
+   "name": {
+    "ru": "Эспрессо-тоник",
+    "kk": "Эспрессо-тоник",
+    "en": "Espresso tonic"
+   },
+   "desc": {
+    "ru": "Освежающее сочетание эспрессо и тоника с яркой горчинкой и живой кислинкой.",
+    "kk": "Эспрессо және жарқын ащылық пен жарқын қышқылдық беретін тониктің сергітетін үйлесімділігі.",
+    "en": "A refreshing mix of espresso and tonic with bright bitterness and lively acidity."
+   }
+  },
+  {
+   "id": "cocoa-with-marshmallows",
+   "category": "specialty",
+   "price": 1850,
+   "name": {
+    "ru": "Какао с маршмеллоу",
+    "kk": "Маршмеллоу қосылған какао",
+    "en": "Cocoa with marshmallows"
+   },
+   "desc": {
+    "ru": "Насыщенное какао на молоке с нежным маршмеллоу и шоколадным вкусом.",
+    "kk": "Жұмсақ маршмеллоу мен шоколад дәмімен сүтте дайындалған қанық какао.",
+    "en": "Rich milk cocoa with soft marshmallows and a chocolatey taste."
+   }
+  },
+  {
+   "id": "hot-chocolate",
+   "category": "specialty",
+   "price": 1850,
+   "name": {
+    "ru": "Горячий шоколад",
+    "kk": "Ыстық шоколад",
+    "en": "Hot chocolate"
+   },
+   "desc": {
+    "ru": "Густой бархатный напиток со вкусом тёмного шоколада.",
+    "kk": "Қанық қара шоколадтың дәмімен қою барқыт сусын.",
+    "en": "A thick, velvety drink with the taste of dark chocolate."
+   }
+  },
+  {
+   "id": "matcha-latte",
+   "category": "specialty",
+   "price": 1800,
+   "name": {
+    "ru": "Матча латте",
+    "kk": "Матча латте",
+    "en": "Matcha latte"
+   },
+   "desc": {
+    "ru": "Японская матча с молоком — мягкий сливочный вкус с лёгкой травяной нотой.",
+    "kk": "Сүт қосылған жапон матчасы - жұмсақ кілегейлі дәм және жеңіл шөп реңкі.",
+    "en": "Japanese matcha with milk — smooth and creamy with a light grassy note."
+   }
+  },
+  {
+   "id": "bumble-coffee",
+   "category": "specialty",
+   "price": 1800,
+   "name": {
+    "ru": "Бамбл кофе",
+    "kk": "Бамбл кофе",
+    "en": "Bumble coffee"
+   },
+   "desc": {
+    "ru": "Эспрессо, апельсиновый сок и карамельный сироп — сладость в паре с кофейной горчинкой.",
+    "kk": "Эспрессо, апельсин шырыны және карамель шәрбаты - тәттілік пен кофе ащылығының үйлесімі.",
+    "en": "Espresso, orange juice and caramel syrup — sweetness meets coffee bitterness."
+   }
+  },
+  {
+   "id": "bumble-matcha",
+   "category": "specialty",
+   "price": 2000,
+   "name": {
+    "ru": "Бамбл матча",
+    "kk": "Бамбл матча",
+    "en": "Bumble matcha"
+   },
+   "desc": {
+    "ru": "Освежающий апельсиновый сок с матчей — яркий, лёгкий, бодрящий вкус.",
+    "kk": "Матча қосылған сергітетін апельсин шырыны - жарқын, жеңіл әрі сергітетін дәм.",
+    "en": "Refreshing orange juice with matcha — bright, light and invigorating."
+   }
+  },
+  {
+   "id": "black-tea-dian-hong",
+   "category": "tea",
+   "price": 1600,
+   "name": {
+    "ru": "Чёрный чай (Дянь Хун)",
+    "kk": "Қара шай (Дянь Хун)",
+    "en": "Black tea (Dian Hong)"
+   },
+   "desc": {
+    "ru": "Насыщенный чёрный чай с лёгкой терпкостью и глубоким ароматом.",
+    "kk": "Жеңіл кермек дәмі мен терең хош иісі бар қанық қара шай.",
+    "en": "Full-bodied black tea with gentle tannins and a deep aroma."
+   }
+  },
+  {
+   "id": "green-tea-ze-shi",
+   "category": "tea",
+   "price": 1600,
+   "name": {
+    "ru": "Зелёный чай (Цзэ Ши)",
+    "kk": "Көк шай (Цзэ Ши)",
+    "en": "Green tea (Ze Shi)"
+   },
+   "desc": {
+    "ru": "Свежий зелёный чай с нежным травяным вкусом и чистым послевкусием.",
+    "kk": "Нәзік шөп дәмі мен таза кейінгі дәмі бар балғын көк шай.",
+    "en": "Fresh green tea with delicate grassy notes and a clean finish."
+   }
+  },
+  {
+   "id": "oolong-jing-xin",
+   "category": "tea",
+   "price": 2000,
+   "name": {
+    "ru": "Улун (Цзин Синь)",
+    "kk": "Улун (Цзин Синь)",
+    "en": "Oolong (Jing Xin)"
+   },
+   "desc": {
+    "ru": "Полуферментированный чай с цветочно-фруктовым вкусом.",
+    "kk": "Гүлді және жемісті дәмі бар жартылай ферменттелген шай.",
+    "en": "Semi-fermented tea with floral and fruity notes."
+   }
+  },
+  {
+   "id": "decaf-tea-rose",
+   "category": "tea",
+   "price": 1600,
+   "name": {
+    "ru": "Чай без кофеина (роза)",
+    "kk": "Декаф шай (Раушан)",
+    "en": "Decaf tea (rose)"
+   },
+   "desc": {
+    "ru": "Чай без кофеина с лёгким вкусом и цветочным ароматом.",
+    "kk": "Жеңіл дәмі мен гүлді хош иісі бар кофеинсіз шай.",
+    "en": "Caffeine-free tea with a light taste and floral aroma."
+   }
+  },
+  {
+   "id": "berry-tea",
+   "category": "signature-tea",
+   "price": 2500,
+   "name": {
+    "ru": "Ягодный чай",
+    "kk": "Жидекті шай",
+    "en": "Berry tea"
+   },
+   "desc": {
+    "ru": "Улун с вишней и малиной — насыщенный ягодный вкус с гармоничной сладостью.",
+    "kk": "Үйлесімді тәттілігі және қанық жидек дәмімен шие мен таңқурай қосылған улун.",
+    "en": "Oolong with cherry and raspberry — rich berry flavour with balanced sweetness."
+   }
+  },
+  {
+   "id": "citrus-tea",
+   "category": "signature-tea",
+   "price": 2500,
+   "name": {
+    "ru": "Цитрусовый чай",
+    "kk": "Цитрусты шай",
+    "en": "Citrus tea"
+   },
+   "desc": {
+    "ru": "Чёрный чай с апельсином и ананасом — освежающий и насыщенный вкус.",
+    "kk": "Сергітетін жіне қанық дәмді апельсин мен ананас қосылған қара шай.",
+    "en": "Black tea with orange and pineapple — refreshing and full of flavour."
+   }
+  },
+  {
+   "id": "peach-tea",
+   "category": "signature-tea",
+   "price": 2500,
+   "name": {
+    "ru": "Персиковый чай",
+    "kk": "Шабдалы шайы",
+    "en": "Peach tea"
+   },
+   "desc": {
+    "ru": "Чёрный чай с персиком и мятой — мягкий фруктовый вкус с лёгкой сладостью.",
+    "kk": "Жеңіл тәттілігі бар жұмсақ жеміс дәмімен шабдалы мен жалбыз қосылған қара шай.",
+    "en": "Black tea with peach and mint — mellow fruit flavour with gentle sweetness."
+   }
+  },
+  {
+   "id": "pineapple-iced-tea",
+   "category": "ice-tea",
+   "price": 1800,
+   "name": {
+    "ru": "Айс-ти с ананасом",
+    "kk": "Ананас қосылған айс-ти",
+    "en": "Pineapple iced tea"
+   },
+   "desc": {
+    "ru": "Охлаждённый зелёный чай с ананасом, лимонным соком и лёгкой карамельной сладостью.",
+    "kk": "Ананас, лимон шырыны және жеңіл карамель тәттілігі қосылған салқындатылған көк шай.",
+    "en": "Chilled green tea with pineapple, lemon juice and a hint of caramel sweetness."
+   }
+  },
+  {
+   "id": "peach-iced-tea",
+   "category": "ice-tea",
+   "price": 1800,
+   "name": {
+    "ru": "Айс-ти с персиком",
+    "kk": "Айс-ти шабдалы",
+    "en": "Peach iced tea"
+   },
+   "desc": {
+    "ru": "Зелёный чай со спелым персиком и мятой — освежающий фруктовый вкус.",
+    "kk": "Сергітетін жемісті дәмімен, піскен шабдалы және жалбыз қосылған көк шай.",
+    "en": "Green tea with ripe peach and mint — a refreshing fruity taste."
+   }
+  },
+  {
+   "id": "berry-iced-tea",
+   "category": "ice-tea",
+   "price": 1800,
+   "name": {
+    "ru": "Ягодный айс-ти",
+    "kk": "Жидекті айс-ти",
+    "en": "Berry iced tea"
+   },
+   "desc": {
+    "ru": "Зелёный чай с ягодным миксом и лимоном — лёгкий, свежий и гармоничный.",
+    "kk": "Жидектер қоспасы мен лимон қосылған көк шай - жеңіл, балғын және үйлесімді.",
+    "en": "Green tea with mixed berries and lemon — light, fresh and well balanced."
+   }
+  },
+  {
+   "id": "classic-lemonade",
+   "category": "lemonades",
+   "price": 2500,
+   "name": {
+    "ru": "Классический лимонад",
+    "kk": "Классикалық лимонад",
+    "en": "Classic lemonade"
+   },
+   "desc": {
+    "ru": "Цитрусовый лимонад с апельсином, ананасом и мятой — яркий освежающий вкус.",
+    "kk": "Апельсин, ананас және жалбыз қосылған цитрусты лимонад жарқын және сергітетін дәм береді.",
+    "en": "Citrus lemonade with orange, pineapple and mint — bright and refreshing."
+   }
+  },
+  {
+   "id": "berry-lemonade",
+   "category": "lemonades",
+   "price": 2500,
+   "name": {
+    "ru": "Ягодный лимонад",
+    "kk": "Жидекті лимонад",
+    "en": "Berry lemonade"
+   },
+   "desc": {
+    "ru": "Клубника, малина и персик в сочетании с лимонной свежестью.",
+    "kk": "Құлпынай, таңқурай және шабдалыны лимон балғындығының үйлесімі.",
+    "en": "Strawberry, raspberry and peach with a splash of lemon freshness."
+   }
+  },
+  {
+   "id": "cola-lemonade",
+   "category": "lemonades",
+   "price": 2500,
+   "name": {
+    "ru": "Лимонад «Кола»",
+    "kk": "Кола лимонады",
+    "en": "Cola lemonade"
+   },
+   "desc": {
+    "ru": "Освежающий газированный напиток с фирменным вкусом колы.",
+    "kk": "Фирмалық кола дәмі бар газдалған сергітетін сусын.",
+    "en": "A fizzy, refreshing drink with our signature cola flavour."
+   }
+  },
+  {
+   "id": "green-smoothie",
+   "category": "smoothies",
+   "price": 2500,
+   "name": {
+    "ru": "Зелёный смузи",
+    "kk": "Жасыл смузи",
+    "en": "Green smoothie"
+   },
+   "desc": {
+    "ru": "Освежающий смузи с киви, зелёным яблоком, шпинатом и бананом — лёгкий и витаминный.",
+    "kk": "Киви, жасыл алма, шпинат және банан қосылған сергітетін смузи - жеңіл және дәруменді дәм.",
+    "en": "Refreshing smoothie with kiwi, green apple, spinach and banana — light and full of vitamins."
+   }
+  },
+  {
+   "id": "berry-smoothie",
+   "category": "smoothies",
+   "price": 2500,
+   "name": {
+    "ru": "Ягодный смузи",
+    "kk": "Жидекті смузи",
+    "en": "Berry smoothie"
+   },
+   "desc": {
+    "ru": "Яркое сочетание ягод и банана — насыщенный кисло-сладкий вкус со свежими фруктовыми нотами.",
+    "kk": "Жидектер мен бананның қанық тәтті-қышқыл дәмі мен балғын жеміс реңктерінің жарқын үйлесімі.",
+    "en": "A vibrant blend of berries and banana — sweet and tangy with fresh fruity notes."
+   }
+  },
+  {
+   "id": "yellow-smoothie",
+   "category": "smoothies",
+   "price": 2500,
+   "name": {
+    "ru": "Жёлтый смузи",
+    "kk": "Сары смузи",
+    "en": "Yellow smoothie"
+   },
+   "desc": {
+    "ru": "Яркий тропический микс из сладкого манго, ананаса, банана и нежного кокосового молока.",
+    "kk": "Тәтті манго, ананас, банан және нәзік кокос сүтінің жарқын тропикалық үйлесімі.",
+    "en": "A bright tropical mix of sweet mango, pineapple, banana and silky coconut milk."
+   }
+  },
+  {
+   "id": "vanilla-milkshake",
+   "category": "milkshakes",
+   "price": 2100,
+   "name": {
+    "ru": "Ванильный милкшейк",
+    "kk": "Ванильді милкшейк",
+    "en": "Vanilla milkshake"
+   },
+   "desc": {
+    "ru": "Нежный ванильный милкшейк с мороженым и лёгкой молочной пенкой.",
+    "kk": "Балмұздақ пен жеңіл сүт көбігі қосылған нәзік ваниль дәмді милкшейк.",
+    "en": "Smooth vanilla milkshake with ice cream and light milky froth."
+   }
+  },
+  {
+   "id": "chocolate-milkshake",
+   "category": "milkshakes",
+   "price": 2100,
+   "name": {
+    "ru": "Шоколадный милкшейк",
+    "kk": "Шоколадты милкшейк",
+    "en": "Chocolate milkshake"
+   },
+   "desc": {
+    "ru": "Насыщенный шоколадный милкшейк из спелого банана, тёмного какао и молока.",
+    "kk": "Жұмсақ банан, қою какао және сүттен дайындалған қанық шоколад дәмді милкшейк.",
+    "en": "Rich chocolate milkshake made with ripe banana, dark cocoa and milk."
+   }
+  },
+  {
+   "id": "strawberry-milkshake",
+   "category": "milkshakes",
+   "price": 2100,
+   "name": {
+    "ru": "Клубничный милкшейк",
+    "kk": "Құлпынайлы милкшейк",
+    "en": "Strawberry milkshake"
+   },
+   "desc": {
+    "ru": "Сливочный милкшейк с клубничным пюре, бананом и нежной ванильной нотой.",
+    "kk": "Құлпынай езбесі, банан және нәзік ваниль дәмі қосылған кілегейлі милкшейк.",
+    "en": "Creamy milkshake with strawberry purée, banana and a hint of vanilla."
+   }
+  },
+  {
+   "id": "cola-0-25-l",
+   "category": "soft-drinks",
+   "price": 900,
+   "name": {
+    "ru": "Кола (0,25 л)",
+    "kk": "Кола (0’25)",
+    "en": "Cola (0.25 l)"
+   },
+   "desc": {
+    "ru": "Классическая газировка, подаётся охлаждённой.",
+    "kk": "Мұздай ұсынылатын классикалық газдалған сусын.",
+    "en": "Classic fizzy drink, served chilled."
+   }
+  },
+  {
+   "id": "sprite-0-25-l",
+   "category": "soft-drinks",
+   "price": 900,
+   "name": {
+    "ru": "Спрайт (0,25 л)",
+    "kk": "Спрайт (0’25)",
+    "en": "Sprite (0.25 l)"
+   },
+   "desc": {
+    "ru": "Освежающая газировка со вкусом лайма и лимона.",
+    "kk": "Лайм мен лимон дәмді сергітетін газдалған сусын.",
+    "en": "Refreshing lemon-lime soda."
+   }
+  },
+  {
+   "id": "fanta-0-25-l",
+   "category": "soft-drinks",
+   "price": 900,
+   "name": {
+    "ru": "Фанта (0,25 л)",
+    "kk": "Фанта (0’25)",
+    "en": "Fanta (0.25 l)"
+   },
+   "desc": {
+    "ru": "Яркая газировка с апельсиновым вкусом.",
+    "kk": "Апельсин дәмді жарқын газдалған сусын.",
+    "en": "Bright orange-flavoured soda."
+   }
+  },
+  {
+   "id": "coconut-milk-350-ml",
+   "category": "milk",
+   "price": 600,
+   "name": {
+    "ru": "Кокосовое молоко (350 мл)",
+    "kk": "Кокос сүті (350 мл.)",
+    "en": "Coconut milk (350 ml)"
+   },
+   "desc": {
+    "ru": "Нежное кокосовое молоко вместо обычного.",
+    "kk": "Кәдімгі сүттің орнына нәзік кокос сүті.",
+    "en": "Silky coconut milk instead of regular milk."
+   }
+  },
+  {
+   "id": "coconut-milk-450-ml",
+   "category": "milk",
+   "price": 700,
+   "name": {
+    "ru": "Кокосовое молоко (450 мл)",
+    "kk": "Кокос сүті (450 мл.)",
+    "en": "Coconut milk (450 ml)"
+   },
+   "desc": {
+    "ru": "Замена обычного молока на кокосовое.",
+    "kk": "Сүтті кокос сүтіне ауыстыру мүмкіндігі.",
+    "en": "Swap regular milk for coconut milk."
+   }
+  },
+  {
+   "id": "almond-milk-350-ml",
+   "category": "milk",
+   "price": 600,
+   "name": {
+    "ru": "Миндальное молоко (350 мл)",
+    "kk": "Бадам сүті (350 мл.)",
+    "en": "Almond milk (350 ml)"
+   },
+   "desc": {
+    "ru": "Нежное миндальное молоко вместо обычного.",
+    "kk": "Кәдімгі сүттің орнына нәзік бадам сүті.",
+    "en": "Delicate almond milk instead of regular milk."
+   }
+  },
+  {
+   "id": "almond-milk-450-ml",
+   "category": "milk",
+   "price": 700,
+   "name": {
+    "ru": "Миндальное молоко (450 мл)",
+    "kk": "Бадам сүті (450 мл.)",
+    "en": "Almond milk (450 ml)"
+   },
+   "desc": {
+    "ru": "Замена обычного молока на миндальное.",
+    "kk": "Сүтті бадам сүтіне ауыстыру мүмкіндігі.",
+    "en": "Swap regular milk for almond milk."
+   }
+  },
+  {
+   "id": "syrups-30-g",
+   "category": "coffee-addons",
+   "price": 250,
+   "name": {
+    "ru": "Сиропы (30 г)",
+    "kk": "Шәрбаттар (30 гр.)",
+    "en": "Syrups (30 g)"
+   },
+   "desc": {
+    "ru": "Ароматный сироп на выбор к вашему кофе.",
+    "kk": "Кофеге қосуға арналған хош иісті шәрбат.",
+    "en": "Flavoured syrup of your choice for your coffee."
+   }
+  },
+  {
+   "id": "syrups-20-g",
+   "category": "coffee-addons",
+   "price": 250,
+   "name": {
+    "ru": "Сиропы (20 г)",
+    "kk": "Шәрбаттар (20 гр.)",
+    "en": "Syrups (20 g)"
+   },
+   "desc": {
+    "ru": "Сироп на выбор для вашего напитка.",
+    "kk": "Сусынға дәм қосатын таңдаулы шәрбат.",
+    "en": "Flavoured syrup of your choice for your drink."
+   }
+  }
+ ]
+}
