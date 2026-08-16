@@ -9,10 +9,10 @@ class Page:
     """Всё, что нужно знать каркасу о конкретной странице."""
 
     __slots__ = ("lang", "path", "title", "description", "body",
-                 "og_image", "json_ld", "body_class")
+                 "og_image", "json_ld", "body_class", "needs_map")
 
     def __init__(self, lang, path, title, description, body,
-                 og_image="", json_ld=None, body_class=""):
+                 og_image="", json_ld=None, body_class="", needs_map=False):
         self.lang = lang
         self.path = path
         self.title = title
@@ -21,6 +21,7 @@ class Page:
         self.og_image = og_image
         self.json_ld = json_ld or []
         self.body_class = body_class
+        self.needs_map = needs_map
 
 
 def _meta(name, content, attr="name"):
@@ -58,6 +59,11 @@ def render_page(page, site, header="", footer=""):
         '  <link rel="stylesheet" href="/css/fonts.css">',
         '  <link rel="stylesheet" href="/css/style.css">',
     ]
+    # Leaflet тянем только туда, где есть карта: на страницах меню и блюд
+    # это лишние 150 КБ без единого пикселя пользы.
+    if page.needs_map:
+        head += ['  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">',
+                 '  <script src="/vendor/leaflet/leaflet.js" defer></script>']
     for block in page.json_ld:
         head.append('  <script type="application/ld+json">%s</script>' % block)
     head += ['  <script src="/js/nav.js" defer></script>',
