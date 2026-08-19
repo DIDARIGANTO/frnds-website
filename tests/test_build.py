@@ -166,13 +166,20 @@ class TestBuiltSite(unittest.TestCase):
             self.assertNotIn("182", data["body"],
                              "%s: количество отзывов зашито в текст" % path.name)
 
-    def test_geo_pages_promise_no_delivery(self):
-        """Своей доставки нет — на сайте не должно быть обещаний привезти."""
-        banned = ["наш курьер", "наши курьеры", "мы доставим", "мы привезём", "мы привезем"]
+    def test_own_delivery_is_present_on_home(self):
+        """У заведения своя доставка — главная обязана о ней говорить."""
+        self.assertIn("своя доставка", self.html["index.html"].lower())
+        self.assertIn("жеткізу", self.html["kz/index.html"].lower())
+        self.assertIn("delivery", self.html["en/index.html"].lower())
+
+    def test_no_third_party_delivery_leftovers(self):
+        """Старые формулировки времён «доставки нет» не должны вернуться."""
+        banned = ["своей доставки нет", "своей доставки у нас нет",
+                  "куда они возят", "зону покрытия определя"]
         for name, html in self.html.items():
             low = html.lower()
             for phrase in banned:
-                self.assertNotIn(phrase, low, "%s: обещание доставки — «%s»" % (name, phrase))
+                self.assertNotIn(phrase, low, "%s: устаревшее — «%s»" % (name, phrase))
 
 
 if __name__ == "__main__":

@@ -3,12 +3,12 @@
  "seo_description": "Pizza on dough we make ourselves, breakfast all day and specialty coffee. Astana, Sagadat Nurmagambetov 25. Open daily 09:00–23:00. Pickup via WhatsApp.",
  "hero_logo_alt": "Frnds — pizzeria and all-day breakfast in Astana",
  "hero_kicker": "Breakfast all day, and pizza",
- "hero_text": "We're at 25 Sagadat Nurmagambetov Street — we bake pizza on our own dough, pull coffee and fry eggs even at nine in the evening. Come by the way you'd come to a friend's place: no occasion, no booking.",
+ "hero_text": "We cook with natural ingredients only: the dough ferments for 48 hours, the pasta is fresh, the bread and sauces are our own. Come by like a friend — or order in, we deliver.",
  "hits_title": "What people order most",
  "breakfast_title": "Breakfast at any hour",
  "breakfast_text": "Breakfast runs from open to close, 09:00 to 23:00. Slept till three? No harm done — the syrniki and the eggs are still here. We'll make the coffee fresh to go with them.",
  "about_title": "A home outside home",
- "about_text": "Frnds comes from friends. We wanted a place you can walk into alone with a laptop, as two people at breakfast, or as a whole table over pizza, and nobody hurries you along. Inspired by Brooklyn, cooked in Astana.",
+ "about_text": "A place where you're expected. Come without an occasion, stay a while, feel like one of us. Walk in like a friend 🧡",
  "reviews_title": "What our guests say",
  "reviews": [
   {
@@ -28,16 +28,19 @@
  "howto": [
   {
    "title": "Eat in",
-   "text": "Just walk in, no booking needed — and if you want a particular table, message us on WhatsApp."
+   "text": "Walk in, no booking needed — and if you want a particular table, message us on WhatsApp and we'll hold it."
   },
   {
    "title": "Pickup",
-   "text": "Send your order to WhatsApp, we'll put it together and text you the moment it's ready."
+   "text": "Message us on WhatsApp and we'll get right on it. The moment everything's ready, we'll let you know — just swing by and take it home warm 🧡"
   },
   {
-   "title": "Delivery apps",
-   "text": "We don't run our own delivery, but you can order us through the delivery services — their couriers bring it."
+   "title": "Delivery",
+   "text": "We run our own delivery 🧡 Message us on WhatsApp — we'll cook your order and bring it hot in proper thermal bags. FRNDS — now at your place too."
   }
  ],
- "map_title": "How to find us"
+ "map_title": "How to find us",
+ "manifesto_title": "Dear friend",
+ "manifesto_text": "We cook with natural ingredients only. Our pizza dough ferments for 48 hours, the pasta is fresh, the bread and sauces are made in-house. Lemonades on real fruit purée, coffee on arabica — and breakfast even at nine in the evening, because comfort doesn't run on a schedule.\n\nCome to Nurmagambetov 25. Or just order — we'll bring it over.",
+ "manifesto_sign": "FRNDS. Cooking for friends ❤️"
 }

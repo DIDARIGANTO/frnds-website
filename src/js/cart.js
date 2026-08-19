@@ -13,14 +13,29 @@
   var WHATSAPP = '77074809215';
   var MAX_URL_TEXT = 1500;
 
+  // Тот же значок WhatsApp, что и в кнопках на страницах (build/components.py)
+  var ICON_WA = '<svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+    '<path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15' +
+    '-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48' +
+    '-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099' +
+    '-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57' +
+    '-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 ' +
+    '2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006' +
+    '-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031' +
+    '-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888' +
+    '-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413' +
+    '-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305' +
+    '-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>';
+
   var LANG = document.body.getAttribute('data-lang') || 'ru';
 
   var STR = {
     ru: {
-      title: 'Ваш заказ', empty: 'Пока пусто. Выберите что-нибудь вкусное.',
+      title: 'Твой заказ', empty: 'Пока пусто. Выбери что-нибудь вкусное.',
       total: 'Итого', send: 'Отправить в WhatsApp', items: 'позиций',
       note: 'Это заготовка сообщения — заказ подтвердится в переписке.',
-      pickup: 'Самовывоз', dinein: 'В зал', clear: 'Очистить',
+      pickup: 'Самовывоз', dinein: 'В зал', delivery: 'Доставка',
+      deliveryMsg: 'Доставка — адрес напишу в чате', clear: 'Очистить',
       added: 'Добавлено', close: 'Закрыть', remove: 'Убрать',
       greeting: 'Здравствуйте! Заказ с сайта:', open: 'Открыть заказ',
       plural: ['позиция', 'позиции', 'позиций']
@@ -29,7 +44,8 @@
       title: 'Сіздің тапсырысыңыз', empty: 'Әзірге бос. Дәмді бірдеңе таңдаңыз.',
       total: 'Барлығы', send: 'WhatsApp арқылы жіберу', items: 'позиция',
       note: 'Бұл — хабарлама дайындамасы, тапсырыс хат алмасуда расталады.',
-      pickup: 'Өзім аламын', dinein: 'Залда', clear: 'Тазалау',
+      pickup: 'Өзім аламын', dinein: 'Залда', delivery: 'Жеткізу',
+      deliveryMsg: 'Жеткізу — мекенжайын чатта жазамын', clear: 'Тазалау',
       added: 'Қосылды', close: 'Жабу', remove: 'Алып тастау',
       greeting: 'Сәлеметсіз бе! Сайттан тапсырыс:', open: 'Тапсырысты ашу',
       plural: ['позиция', 'позиция', 'позиция']
@@ -38,7 +54,8 @@
       title: 'Your order', empty: 'Empty for now. Pick something tasty.',
       total: 'Total', send: 'Send via WhatsApp', items: 'items',
       note: 'This only drafts a message — the order is confirmed in chat.',
-      pickup: 'Pickup', dinein: 'Dine in', clear: 'Clear',
+      pickup: 'Pickup', dinein: 'Dine in', delivery: 'Delivery',
+      deliveryMsg: "Delivery — I'll send the address in chat", clear: 'Clear',
       added: 'Added', close: 'Close', remove: 'Remove',
       greeting: 'Hello! An order from your website:', open: 'Open order',
       plural: ['item', 'items', 'items']
@@ -158,11 +175,14 @@
         ? '• ' + i.name + qty
         : '• ' + i.name + qty + ' — ' + money(i.price * i.qty);
     });
+    var modeLine = mode === 'dinein' ? STR.dinein
+      : mode === 'delivery' ? STR.deliveryMsg
+      : STR.pickup;
     return [
       STR.greeting, '',
       lines.join('\n'), '',
       STR.total + ': ' + money(total(list)),
-      mode === 'dinein' ? STR.dinein : STR.pickup
+      modeLine
     ].join('\n');
   }
 
@@ -203,13 +223,15 @@
       '</div>' +
       '<ul class="cart-list"></ul>' +
       '<div class="cart-mode">' +
-        '<input type="radio" name="frnds-mode" id="frnds-mode-pickup" value="pickup" checked>' +
+        '<input type="radio" name="frnds-mode" id="frnds-mode-delivery" value="delivery" checked>' +
+        '<label for="frnds-mode-delivery">' + esc(STR.delivery) + '</label>' +
+        '<input type="radio" name="frnds-mode" id="frnds-mode-pickup" value="pickup">' +
         '<label for="frnds-mode-pickup">' + esc(STR.pickup) + '</label>' +
         '<input type="radio" name="frnds-mode" id="frnds-mode-dinein" value="dinein">' +
         '<label for="frnds-mode-dinein">' + esc(STR.dinein) + '</label>' +
       '</div>' +
       '<div class="cart-total"><span>' + esc(STR.total) + '</span><span class="cart-total__value"></span></div>' +
-      '<a class="pill pill--brand cart-send" href="#" rel="noopener" target="_blank">' + esc(STR.send) + '</a>' +
+      '<a class="pill pill--brand pill--wa cart-send" href="#" rel="noopener" target="_blank">' + ICON_WA + '<span>' + esc(STR.send) + '</span></a>' +
       '<p class="cart-note">' + esc(STR.note) + '</p>' +
       '<p><button class="cart-clear" type="button">' + esc(STR.clear) + '</button></p>';
     document.body.appendChild(panel);

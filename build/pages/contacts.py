@@ -2,6 +2,7 @@
 
 from html import escape
 
+from build.components import whatsapp_button
 from build.i18n import t, url
 from build.layout import Page
 from build.seo import breadcrumbs_jsonld, restaurant_jsonld
@@ -36,7 +37,7 @@ def build(site, menu, texts, lang):
         '<p><a href="%(ig)s" rel="noopener" target="_blank">Instagram</a></p></div>'
         "%(aggregators)s"
         "</div>"
-        '<p class="section__more"><a class="pill pill--brand" href="%(wa)s" rel="noopener" target="_blank">%(cta_wa)s</a></p>'
+        '<p class="section__more">%(wa_btn)s</p>'
         "</div></section>"
         '<section class="section section--tint"><div class="container">'
         '<div id="map" data-lat="%(lat)s" data-lon="%(lon)s" data-label="%(label)s"></div>'
@@ -50,7 +51,8 @@ def build(site, menu, texts, lang):
            "hours_note": escape(texts["hours_note"]),
            "contact_title": escape({"ru": "Связаться", "kk": "Байланысу", "en": "Get in touch"}[lang]),
            "phone": escape(site.phone, quote=True), "phone_view": "+7 707 480 92 15",
-           "wa": wa, "ig": escape(site.instagram, quote=True),
+           "wa": wa, "wa_btn": whatsapp_button(site, lang, "brand"),
+           "ig": escape(site.instagram, quote=True),
            "aggregators": aggregator_block,
            "cta_wa": escape(t("cta.whatsapp", lang)),
            "lat": site.coords["lat"], "lon": site.coords["lon"],

@@ -2,7 +2,7 @@
 
 from html import escape
 
-from build.components import dense_row
+from build.components import dense_row, whatsapp_button
 from build.i18n import t, url
 from build.layout import Page
 from build.seo import breadcrumbs_jsonld
@@ -29,14 +29,14 @@ def build(site, menu, texts, lang):
         '<h2 class="display">%(menu_title)s</h2>'
         '<ul class="rows">%(rows)s</ul>'
         '<p class="section__more">%(cta)s</p>'
-        '<p><a class="pill pill--brand" href="%(wa)s" rel="noopener" target="_blank">%(cta_wa)s</a> '
+        "<p>%(wa_btn)s "
         '<a class="pill pill--ghost" href="%(menu_url)s">%(all_menu)s</a></p>'
         "</div></section></main>"
         % {"h1": escape(texts["h1"]), "intro": escape(texts["intro"]),
            "body": _paragraphs(texts["body"]),
            "menu_title": escape(t("nav.breakfast", lang)), "rows": rows,
-           "cta": escape(texts["cta_text"]), "wa": wa,
-           "cta_wa": escape(t("cta.whatsapp", lang)),
+           "cta": escape(texts["cta_text"]),
+           "wa_btn": whatsapp_button(site, lang, "brand"),
            "menu_url": url(lang, "menu"), "all_menu": escape(t("menu.all", lang))}
     )
 

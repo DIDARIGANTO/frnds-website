@@ -2,7 +2,7 @@
 
 from html import escape
 
-from build.components import dish_card, money, price_pill
+from build.components import dish_card, money, price_pill, whatsapp_button
 from build.i18n import t, url
 from build.layout import Page
 from build.seo import breadcrumbs_jsonld, menuitem_jsonld
@@ -54,15 +54,14 @@ def build(site, menu, item, lang):
         '<p class="hero__lead">%(desc)s</p>'
         '<p class="dish__price">%(price)s</p>'
         '<div class="hero__actions">%(pill)s'
-        '<a class="pill pill--ghost" href="%(wa)s" rel="noopener" target="_blank">%(cta_wa)s</a></div>'
+        "%(wa_btn)s</div>"
         '<p class="section__more"><a href="%(menu_href)s">← %(back)s</a></p>'
         "</div></div></div>%(similar)s</main>"
         % {"menu_href": url(lang, "menu"), "menu_name": escape(t("nav.menu", lang)),
            "name": escape(name), "picture": _picture(item.photo, alt),
            "desc": escape(item.desc[lang]), "price": escape(money(item.price)),
            "pill": price_pill(item.price, lang, item.id),
-           "wa": "https://wa.me/%s" % site.whatsapp,
-           "cta_wa": escape(t("cta.whatsapp", lang)),
+           "wa_btn": whatsapp_button(site, lang, "ghost"),
            "back": escape(t("dish.back", lang)),
            "similar": _similar(menu, item, lang)}
     )

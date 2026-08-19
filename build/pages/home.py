@@ -2,7 +2,7 @@
 
 from html import escape
 
-from build.components import dish_card
+from build.components import dish_card, whatsapp_button
 from build.i18n import t, url
 from build.layout import Page
 from build.seo import restaurant_jsonld
@@ -27,7 +27,7 @@ def _hero(site, texts, lang):
         '<p class="hero__lead">%(lead)s</p>'
         '<div class="hero__actions">'
         '<a class="pill pill--brand" href="%(menu_url)s">%(cta_menu)s</a>'
-        '<a class="pill pill--ghost" href="%(wa)s" rel="noopener" target="_blank">%(cta_wa)s</a>'
+        "%(wa_btn)s"
         "</div>"
         '<p class="hero__meta"><span class="dot"></span>%(address)s · %(today)s %(close)s</p>'
         "</div>"
@@ -45,7 +45,7 @@ def _hero(site, texts, lang):
         % {"logo_alt": escape(texts["hero_logo_alt"], quote=True),
            "kicker": escape(texts["hero_kicker"]), "lead": escape(texts["hero_text"]),
            "menu_url": url(lang, "menu"), "cta_menu": escape(t("cta.menu", lang)),
-           "wa": wa, "cta_wa": escape(t("cta.whatsapp", lang)),
+           "wa_btn": whatsapp_button(site, lang, "ghost"),
            "address": escape(site.address[lang]), "today": escape(t("hours.today", lang)),
            "close": site.hours["close"],
            "alt": escape("Пицца Маргарита — Frnds, %s" % CITY[lang], quote=True)}
@@ -61,6 +61,22 @@ def _hits(menu, texts, lang):
         "</div></section>"
         % (escape(texts["hits_title"]), _stroke(), cards,
            url(lang, "menu"), escape(t("menu.all", lang)))
+    )
+
+
+def _manifesto(texts, lang):
+    """Письмо гостю — фирменный текст владельца, слово в слово."""
+    paragraphs = "".join(
+        "<p>%s</p>" % escape(p.strip())
+        for p in texts["manifesto_text"].split("\n\n") if p.strip()
+    )
+    return (
+        '<section class="section watermark"><div class="container manifesto">'
+        '<h2 class="display">%s</h2>%s%s'
+        '<p class="manifesto__sign">%s</p>'
+        "</div></section>"
+        % (escape(texts["manifesto_title"]), _stroke(), paragraphs,
+           escape(texts["manifesto_sign"]))
     )
 
 
@@ -112,14 +128,9 @@ def _reviews(site, texts, lang):
 
 
 def _howto(site, texts, lang):
-    tiles = texts["howto"]
-    if not site.aggregators:
-        # Ссылок на агрегаторы владелец ещё не прислал — плитку не показываем,
-        # чтобы не отправлять гостя в никуда.
-        tiles = tiles[:2]
     cells = "".join(
         '<article class="tile"><h3>%s</h3><p>%s</p></article>'
-        % (escape(x["title"]), escape(x["text"])) for x in tiles
+        % (escape(x["title"]), escape(x["text"])) for x in texts["howto"]
     )
     return (
         '<section class="section"><div class="container">'
@@ -146,6 +157,7 @@ def build(site, menu, texts, lang):
         '<main id="main">',
         _hero(site, texts, lang),
         _hits(menu, texts, lang),
+        _manifesto(texts, lang),
         _breakfast(texts, lang),
         _about(texts, lang),
         _reviews(site, texts, lang),

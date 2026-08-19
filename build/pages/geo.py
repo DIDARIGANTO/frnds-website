@@ -8,7 +8,7 @@ import json
 from html import escape
 from pathlib import Path
 
-from build.components import dish_card
+from build.components import dish_card, whatsapp_button
 from build.i18n import t, url
 from build.layout import Page
 from build.seo import breadcrumbs_jsonld, restaurant_jsonld
@@ -52,7 +52,7 @@ def _build_one(site, menu, texts, slug, lang):
         '<section class="section section--tint"><div class="container">'
         '<h2 class="display">%(hits)s</h2><div class="grid">%(cards)s</div>'
         '<p class="section__more">%(cta)s</p>'
-        '<p><a class="pill pill--brand" href="%(wa)s" rel="noopener" target="_blank">%(cta_wa)s</a> '
+        "<p>%(wa_btn)s "
         '<a class="pill pill--ghost" href="%(menu_url)s">%(all_menu)s</a></p>'
         "</div></section></main>"
         % {"h1": escape(texts["h1"]), "body": _paragraphs(texts["body"]),
@@ -61,8 +61,8 @@ def _build_one(site, menu, texts, slug, lang):
            "landmarks": escape(texts["landmarks"]),
            "hits": escape({"ru": "Что берут чаще всего", "kk": "Жиі тапсырыс беретіндер",
                            "en": "What people order most"}[lang]),
-           "cards": cards, "cta": escape(texts["cta"]), "wa": wa,
-           "cta_wa": escape(t("cta.whatsapp", lang)),
+           "cards": cards, "cta": escape(texts["cta"]),
+           "wa_btn": whatsapp_button(site, lang, "brand"),
            "menu_url": url(lang, "menu"), "all_menu": escape(t("menu.all", lang))}
     )
 

@@ -148,6 +148,17 @@ class TestComponents(unittest.TestCase):
         self.assertIn('href="tel:+77074809215"', html)
         self.assertIn("2gis.kz", html)
 
+    def test_whatsapp_buttons_carry_icon(self):
+        from build.components import whatsapp_button
+        html = whatsapp_button(make_site(), "ru", "ghost")
+        self.assertIn("icon-wa", html)
+        self.assertIn("pill--wa", html)
+        self.assertIn("pill--ghost", html)
+        self.assertIn("wa.me/77074809215", html)
+        # Шапка и подвал тоже используют кнопку со значком
+        self.assertIn("icon-wa", header("ru", make_site()))
+        self.assertIn("icon-wa", footer("ru", make_site()))
+
 
 if __name__ == "__main__":
     unittest.main()
