@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-EXPECTED_PAGES = 75          # 25 страниц × 3 языка
+EXPECTED_PAGES = 78          # 26 страниц × 3 языка
 EXPECTED_ITEMS = 105
 EXPECTED_PIZZAS = 13
 
@@ -180,14 +180,29 @@ class TestBuiltSite(unittest.TestCase):
             ("en/privacy/index.html", "94-V"),
         ):
             self.assertIn(marker, self.html[path], path)
-        # Баннер согласия есть на каждой странице и ведёт на политику своего языка
+        # Баннер согласия есть на каждой странице и ведёт на политику
+        # и оферту своего языка
         for name, html in self.html.items():
             self.assertIn('id="consent"', html, "%s: нет баннера согласия" % name)
             self.assertIn('id="consent-ok"', html, name)
         self.assertIn('href="/privacy/"', self.html["index.html"])
         self.assertIn('href="/kz/privacy/"', self.html["kz/index.html"])
-        # Ссылка на политику в подвале
+        self.assertIn('href="/offer/"', self.html["index.html"])
+        self.assertIn('href="/en/offer/"', self.html["en/index.html"])
+        # Ссылки на оба документа в подвале
         self.assertIn('href="/privacy/"', self.html["menu/index.html"])
+        self.assertIn('href="/offer/"', self.html["menu/index.html"])
+
+    def test_public_offer_page(self):
+        """Оферта: статья 395 ГК РК, продавец, доставка, возврат."""
+        for path, markers in (
+            ("offer/index.html", ("395", "Frnds", "термосумк")),
+            ("kz/offer/index.html", ("395", "термосөмке")),
+            ("en/offer/index.html", ("395", "thermal bag")),
+        ):
+            html = self.html[path].lower()
+            for m in markers:
+                self.assertIn(m.lower(), html, "%s: нет «%s»" % (path, m))
 
     def test_delivery_page_exists_and_links_to_menu(self):
         """Страница «Доставка»: термосумки, WhatsApp и переход в меню."""

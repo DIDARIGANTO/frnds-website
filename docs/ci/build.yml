@@ -28,8 +28,8 @@ jobs:
         run: |
           COUNT=$(find dist -name index.html | wc -l | tr -d ' ')
           echo "Собрано страниц: $COUNT"
-          if [ "$COUNT" -ne 75 ]; then
-            echo "Ожидалось 75 страниц, собрано $COUNT"
+          if [ "$COUNT" -ne 78 ]; then
+            echo "Ожидалось 78 страниц, собрано $COUNT"
             exit 1
           fi
 

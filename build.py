@@ -15,7 +15,7 @@ from build.components import footer, header
 from build.data import DataError, load_menu, load_page, load_site
 from build.i18n import LANGS, output_path
 from build.layout import render_page
-from build.pages import about, breakfast, contacts, delivery, dish, geo, home, privacy
+from build.pages import about, breakfast, contacts, delivery, dish, geo, home, offer, privacy
 from build.pages import menu as menu_page
 from build.seo import robots_txt, sitemap_xml
 
@@ -30,6 +30,7 @@ SIMPLE_PAGES = [
     ("about", "about", about),
     ("contacts", "contacts", contacts),
     ("privacy", "privacy", privacy),
+    ("offer", "offer", offer),
 ]
 
 

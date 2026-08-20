@@ -200,7 +200,8 @@ def footer(lang, site):
         "</div>"
         "</div>"
         '<div class="container footer__legal">© 2026 Frnds · %(rights)s · '
-        '<a href="%(privacy_url)s">%(privacy)s</a></div>'
+        '<a href="%(privacy_url)s">%(privacy)s</a> · '
+        '<a href="%(offer_url)s">%(offer)s</a></div>'
         "</footer>"
         % {"address": escape(site.address[lang]), "open": site.hours["open"],
            "close": site.hours["close"], "links": nav_links(lang),
@@ -211,5 +212,7 @@ def footer(lang, site):
            "ig": escape(site.instagram, quote=True), "gis": escape(site.twogis, quote=True),
            "rights": escape(t("footer.rights", lang)),
            "privacy_url": url(lang, "privacy"),
-           "privacy": escape(t("nav.privacy", lang))}
+           "privacy": escape(t("nav.privacy", lang)),
+           "offer_url": url(lang, "offer"),
+           "offer": escape(t("nav.offer", lang))}
     )

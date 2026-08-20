@@ -71,17 +71,22 @@ def render_page(page, site, header="", footer=""):
              "</head>"]
 
     # Уведомление об обработке персональных данных (закон РК № 94-V).
-    # Скрыто по умолчанию; nav.js показывает его, пока гость не нажал «Хорошо».
+    # Скрыто по умолчанию; nav.js показывает его, пока гость не закрыл крестиком.
+    # Шаблон с плейсхолдерами: порядок слов в казахском другой, поэтому ссылки
+    # подставляются в переведённое предложение, а не приклеиваются к концу.
+    sentence = escape(t("consent.template", page.lang))
+    sentence = sentence.replace("{privacy}", '<a href="%s">%s</a>' % (
+        url(page.lang, "privacy"), escape(t("consent.privacy", page.lang))))
+    sentence = sentence.replace("{offer}", '<a href="%s">%s</a>' % (
+        url(page.lang, "offer"), escape(t("consent.offer", page.lang))))
     consent = (
         '<div class="consent" id="consent" role="region" aria-label="%(label)s" hidden>'
-        "<p>%(text)s <a href=\"%(href)s\">%(more)s</a></p>"
-        '<button class="pill pill--brand" type="button" id="consent-ok">%(ok)s</button>'
+        "<p>%(sentence)s</p>"
+        '<button class="consent__close" type="button" id="consent-ok" aria-label="%(close)s">×</button>'
         "</div>"
         % {"label": escape(t("nav.privacy", page.lang)),
-           "text": escape(t("consent.text", page.lang)),
-           "href": url(page.lang, "privacy"),
-           "more": escape(t("consent.more", page.lang)),
-           "ok": escape(t("consent.ok", page.lang))}
+           "sentence": sentence,
+           "close": escape(t("consent.close", page.lang))}
     )
 
     body_class = ' class="%s"' % page.body_class if page.body_class else ""
