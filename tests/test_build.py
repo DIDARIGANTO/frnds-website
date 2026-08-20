@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-EXPECTED_PAGES = 72          # 24 страницы × 3 языка
+EXPECTED_PAGES = 75          # 25 страниц × 3 языка
 EXPECTED_ITEMS = 105
 EXPECTED_PIZZAS = 13
 
@@ -171,6 +171,23 @@ class TestBuiltSite(unittest.TestCase):
         self.assertIn("своя доставка", self.html["index.html"].lower())
         self.assertIn("жеткізу", self.html["kz/index.html"].lower())
         self.assertIn("delivery", self.html["en/index.html"].lower())
+
+    def test_privacy_page_and_consent_banner(self):
+        """Политика конфиденциальности и уведомление о данных (закон РК 94-V)."""
+        for path, marker in (
+            ("privacy/index.html", "94-V"),
+            ("kz/privacy/index.html", "94-V"),
+            ("en/privacy/index.html", "94-V"),
+        ):
+            self.assertIn(marker, self.html[path], path)
+        # Баннер согласия есть на каждой странице и ведёт на политику своего языка
+        for name, html in self.html.items():
+            self.assertIn('id="consent"', html, "%s: нет баннера согласия" % name)
+            self.assertIn('id="consent-ok"', html, name)
+        self.assertIn('href="/privacy/"', self.html["index.html"])
+        self.assertIn('href="/kz/privacy/"', self.html["kz/index.html"])
+        # Ссылка на политику в подвале
+        self.assertIn('href="/privacy/"', self.html["menu/index.html"])
 
     def test_delivery_page_exists_and_links_to_menu(self):
         """Страница «Доставка»: термосумки, WhatsApp и переход в меню."""

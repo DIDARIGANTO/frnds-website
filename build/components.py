@@ -199,7 +199,8 @@ def footer(lang, site):
         '<a href="%(gis)s" rel="noopener" target="_blank">2GIS</a>'
         "</div>"
         "</div>"
-        '<div class="container footer__legal">© 2026 Frnds · %(rights)s</div>'
+        '<div class="container footer__legal">© 2026 Frnds · %(rights)s · '
+        '<a href="%(privacy_url)s">%(privacy)s</a></div>'
         "</footer>"
         % {"address": escape(site.address[lang]), "open": site.hours["open"],
            "close": site.hours["close"], "links": nav_links(lang),
@@ -208,5 +209,7 @@ def footer(lang, site):
            "phone_view": escape("+7 707 480 92 15"),
            "wa": escape(site.whatsapp, quote=True), "wa_icon": ICON_WA,
            "ig": escape(site.instagram, quote=True), "gis": escape(site.twogis, quote=True),
-           "rights": escape(t("footer.rights", lang))}
+           "rights": escape(t("footer.rights", lang)),
+           "privacy_url": url(lang, "privacy"),
+           "privacy": escape(t("nav.privacy", lang))}
     )

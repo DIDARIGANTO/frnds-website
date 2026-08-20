@@ -362,6 +362,29 @@ body[data-lang="kk"] .manifesto__sign { font-family: Manrope, system-ui, sans-se
 .cart-send { width: 100%; }
 .cart-clear { background: none; border: 0; color: var(--ink-soft); font: 600 13px Manrope, sans-serif; cursor: pointer; text-decoration: underline; }
 
+/* ---------- уведомление о персональных данных ---------- */
+
+.consent {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 75;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 12px 22px;
+  padding: 14px 20px calc(14px + env(safe-area-inset-bottom));
+  background: var(--surface);
+  box-shadow: 0 -10px 32px rgba(26, 26, 26, .14);
+  font-size: 14px; line-height: 1.5; text-align: center;
+}
+/* display: flex перебил бы атрибут hidden — возвращаем скрытие явно */
+.consent[hidden] { display: none; }
+.consent p { margin: 0; max-width: 660px; }
+.consent .pill { min-height: 40px; padding: 9px 22px; }
+
+/* ---------- страница политики ---------- */
+
+.legal { max-width: 760px; padding-top: 34px; padding-bottom: 60px; }
+.legal section { margin-top: 34px; }
+.legal h2 { font-size: 22px; }
+.legal__updated { margin-top: 40px; color: var(--ink-soft); font-size: 13.5px; }
+
 /* ---------- подвал ---------- */
 
 .footer { background: var(--ink); color: rgba(253, 248, 243, .82); margin-top: 72px; }

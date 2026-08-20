@@ -45,6 +45,14 @@ UI = {
     "skip.content":   {"ru": "Перейти к содержимому", "kk": "Мазмұнға өту", "en": "Skip to content"},
     "lang.switch":    {"ru": "Язык сайта",  "kk": "Сайт тілі",    "en": "Site language"},
     "breadcrumb.home": {"ru": "Главная",    "kk": "Басты бет",    "en": "Home"},
+    "consent.text":   {"ru": "Мы обрабатываем персональные данные только для приёма заказов. Продолжая пользоваться сайтом, ты соглашаешься с политикой конфиденциальности.",
+                       "kk": "Дербес деректерді тек тапсырыс қабылдау үшін өңдейміз. Сайтты пайдалана берсеңіз, құпиялылық саясатына келісесіз.",
+                       "en": "We process personal data only to take orders. By continuing to use this site you agree to our privacy policy."},
+    "consent.ok":     {"ru": "Хорошо",      "kk": "Жарайды",      "en": "OK"},
+    "consent.more":   {"ru": "Подробнее",   "kk": "Толығырақ",    "en": "Learn more"},
+    "nav.privacy":    {"ru": "Политика конфиденциальности",
+                       "kk": "Құпиялылық саясаты",
+                       "en": "Privacy policy"},
 }
 
 

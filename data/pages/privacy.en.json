@@ -1,0 +1,33 @@
+{
+ "seo_title": "Privacy policy — Frnds Astana",
+ "seo_description": "How Frnds café handles personal data: what we receive with a WhatsApp order, what stays on your device, and your rights under Kazakhstan law.",
+ "h1": "Privacy policy",
+ "intro": "Short and human: what data we receive, why we need it, and what you can do about it.",
+ "sections": [
+  {
+   "title": "Who operates your data",
+   "text": "The operator is Frnds café, 25 Sagadat Nurmagambetov Street, Astana. For anything about personal data, reach us on WhatsApp or by phone at +7 707 480 92 15 — we answer during opening hours, daily from 09:00 to 23:00.\n\nWe process data under the Law of the Republic of Kazakhstan “On Personal Data and Its Protection” No. 94-V of 21 May 2013."
+  },
+  {
+   "title": "What we receive and why",
+   "text": "When you message us on WhatsApp or call, we see your profile name, phone number, the order itself and — for delivery — your address. We use this for one purpose only: to cook your order, bring it to you and get in touch if a question comes up.\n\nThe legal basis is your consent, given when you message us or keep using the site. No mailing lists, no advertising use, no selling data to anyone."
+  },
+  {
+   "title": "What the site keeps on your device",
+   "text": "The site stores two things in your browser's localStorage: your cart, so it survives a page refresh, and a note that you've seen the data notice. This stays on your device and is never sent to our servers.\n\nThere are no cookies, no analytics counters and no ad trackers on this site — and no forms asking for your name or phone."
+  },
+  {
+   "title": "Who else is technically involved",
+   "text": "Messages travel through WhatsApp, so the WhatsApp (Meta) terms apply to the conversation. The site is hosted on Vercel, which — like any host — keeps technical request logs (IP address, request time). The map on the contact pages loads from OpenStreetMap servers, which receive your IP when the map loads.\n\nThese services get only the technical minimum needed for the site and the chat to work."
+  },
+  {
+   "title": "How long we keep it",
+   "text": "We keep WhatsApp conversations for as long as we need them to handle orders. Ask us and we'll delete yours right away."
+  },
+  {
+   "title": "Your rights",
+   "text": "Under Kazakhstan law you can ask what data we hold about you, have it corrected, withdraw consent and request deletion. Just message us on WhatsApp or tell the administrator at the café.\n\nIf you believe your rights have been violated, you can contact the authorised personal data protection body of the Republic of Kazakhstan."
+  }
+ ],
+ "updated": "Version of 20 August 2026."
+}

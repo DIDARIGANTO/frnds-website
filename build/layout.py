@@ -2,7 +2,7 @@
 
 from html import escape
 
-from build.i18n import HTML_LANG, alternate_urls, t
+from build.i18n import HTML_LANG, alternate_urls, t, url
 
 
 class Page:
@@ -70,6 +70,20 @@ def render_page(page, site, header="", footer=""):
              '  <script src="/js/cart.js" defer></script>',
              "</head>"]
 
+    # Уведомление об обработке персональных данных (закон РК № 94-V).
+    # Скрыто по умолчанию; nav.js показывает его, пока гость не нажал «Хорошо».
+    consent = (
+        '<div class="consent" id="consent" role="region" aria-label="%(label)s" hidden>'
+        "<p>%(text)s <a href=\"%(href)s\">%(more)s</a></p>"
+        '<button class="pill pill--brand" type="button" id="consent-ok">%(ok)s</button>'
+        "</div>"
+        % {"label": escape(t("nav.privacy", page.lang)),
+           "text": escape(t("consent.text", page.lang)),
+           "href": url(page.lang, "privacy"),
+           "more": escape(t("consent.more", page.lang)),
+           "ok": escape(t("consent.ok", page.lang))}
+    )
+
     body_class = ' class="%s"' % page.body_class if page.body_class else ""
     body = [
         '<body%s data-lang="%s">' % (body_class, page.lang),
@@ -77,6 +91,7 @@ def render_page(page, site, header="", footer=""):
         header,
         page.body,
         footer,
+        consent,
         "</body>",
         "</html>",
     ]

@@ -58,6 +58,23 @@
     sections.forEach(function (section) { observer.observe(section); });
   }
 
+  /* ---------- уведомление о персональных данных ---------- */
+
+  var consent = document.getElementById('consent');
+  if (consent) {
+    var KEY = 'frnds.consent.v1';
+    var seen = false;
+    try { seen = !!localStorage.getItem(KEY); } catch (e) { /* приватный режим */ }
+    if (!seen) consent.hidden = false;
+    var ok = document.getElementById('consent-ok');
+    if (ok) {
+      ok.addEventListener('click', function () {
+        consent.hidden = true;
+        try { localStorage.setItem(KEY, String(Date.now())); } catch (e) { /* ок */ }
+      });
+    }
+  }
+
   /* ---------- карта ---------- */
 
   var mapEl = document.getElementById('map');
