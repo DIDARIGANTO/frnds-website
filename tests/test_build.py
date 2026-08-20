@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-EXPECTED_PAGES = 69          # 23 страницы × 3 языка
+EXPECTED_PAGES = 72          # 24 страницы × 3 языка
 EXPECTED_ITEMS = 105
 EXPECTED_PIZZAS = 13
 
@@ -171,6 +171,21 @@ class TestBuiltSite(unittest.TestCase):
         self.assertIn("своя доставка", self.html["index.html"].lower())
         self.assertIn("жеткізу", self.html["kz/index.html"].lower())
         self.assertIn("delivery", self.html["en/index.html"].lower())
+
+    def test_delivery_page_exists_and_links_to_menu(self):
+        """Страница «Доставка»: термосумки, WhatsApp и переход в меню."""
+        for path, menu_href, marker in (
+            ("delivery/index.html", 'href="/menu/"', "термосумк"),
+            ("kz/delivery/index.html", 'href="/kz/menu/"', "термосөмке"),
+            ("en/delivery/index.html", 'href="/en/menu/"', "thermal bag"),
+        ):
+            html = self.html[path]
+            self.assertIn(menu_href, html, path)
+            self.assertIn(marker, html.lower(), path)
+            self.assertIn("wa.me/", html, path)
+        # Пункт «Доставка» есть в шапке каждой страницы
+        self.assertIn('href="/delivery/"', self.html["index.html"])
+        self.assertIn('href="/kz/delivery/"', self.html["kz/menu/index.html"])
 
     def test_no_third_party_delivery_leftovers(self):
         """Старые формулировки времён «доставки нет» не должны вернуться."""

@@ -146,7 +146,8 @@ def _lang_switch(lang, path=""):
 
 
 def nav_links(lang):
-    items = [("nav.menu", "menu"), ("nav.breakfast", "breakfast"),
+    items = [("nav.menu", "menu"), ("nav.delivery", "delivery"),
+             ("nav.breakfast", "breakfast"),
              ("nav.about", "about"), ("nav.contacts", "contacts")]
     return "".join(
         '<a href="%s">%s</a>' % (url(lang, target), escape(t(key, lang)))

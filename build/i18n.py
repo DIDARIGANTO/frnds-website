@@ -12,6 +12,7 @@ HTML_LANG = {"ru": "ru", "kk": "kk", "en": "en"}
 
 UI = {
     "nav.menu":       {"ru": "Меню",        "kk": "Мәзір",        "en": "Menu"},
+    "nav.delivery":   {"ru": "Доставка",    "kk": "Жеткізу",      "en": "Delivery"},
     "nav.breakfast":  {"ru": "Завтраки",    "kk": "Таңғы ас",     "en": "Breakfast"},
     "nav.about":      {"ru": "Наш дом",     "kk": "Біздің үй",    "en": "Our place"},
     "nav.contacts":   {"ru": "Контакты",    "kk": "Байланыс",     "en": "Contacts"},
