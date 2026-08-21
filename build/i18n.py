@@ -46,9 +46,9 @@ UI = {
     "lang.switch":    {"ru": "Язык сайта",  "kk": "Сайт тілі",    "en": "Site language"},
     "breadcrumb.home": {"ru": "Главная",    "kk": "Басты бет",    "en": "Home"},
     "consent.template": {
-        "ru": "Тесту нужно 48 часов, а сайту — только твоё согласие. Пользуясь сайтом, ты принимаешь {privacy} и {offer}.",
-        "kk": "Қамырға 48 сағат керек, ал сайтқа — тек сіздің келісіміңіз. Сайтты пайдалана отырып, сіз {privacy} және {offer} қабылдайсыз.",
-        "en": "Our dough needs 48 hours — the site only needs your OK. By using it you accept the {privacy} and the {offer}.",
+        "ru": "К друзьям заходят без формальностей. У нас одна, и та короткая: пользуясь сайтом, ты принимаешь {privacy} и {offer}.",
+        "kk": "Досқа формальдылықсыз кіреді. Бізде біреу ғана бар, ол да қысқа: сайтты пайдалана отырып, сіз {privacy} және {offer} қабылдайсыз.",
+        "en": "Friends don't ask for paperwork. We have just one line of it: by using the site you accept our {privacy} and {offer}.",
     },
     "consent.privacy": {"ru": "обработку персональных данных",
                         "kk": "дербес деректерді өңдеуді",
