@@ -9,6 +9,36 @@ from build.seo import restaurant_jsonld
 
 CITY = {"ru": "Астана", "kk": "Астана", "en": "Astana"}
 
+# Полароиды команды и гостей — «made for our friends». Снимки уже в рамках,
+# сайт только раскладывает их веером, как на фотостене в зале.
+POLAROID_ALT = {
+    "team-kitchen": {"ru": "Команда Frnds на кухне — селфи с поварами",
+                     "kk": "Frnds командасы ас үйде — аспаздармен селфи",
+                     "en": "The Frnds team in the kitchen — selfie with the chefs"},
+    "chefs-heart": {"ru": "Повара Frnds складывают сердце над тарелкой",
+                    "kk": "Frnds аспаздары тәрелке үстінде жүрек жасап тұр",
+                    "en": "Frnds chefs making a heart over a plate"},
+    "guests-table": {"ru": "Гости Frnds за большим общим столом",
+                     "kk": "Frnds қонақтары үлкен ортақ үстел басында",
+                     "en": "Frnds guests at the big communal table"},
+    "photo-wall": {"ru": "Гости Frnds у фотостены в зале",
+                   "kk": "Frnds қонақтары залдағы фотоқабырға жанында",
+                   "en": "Frnds guests by the photo wall in the café"},
+}
+
+
+def polaroid(slug, lang, sizes="(max-width: 900px) 50vw, 260px", eager=False):
+    base = "/img/team/%s" % slug
+    return (
+        "<picture>"
+        '<source type="image/webp" srcset="%(b)s-360.webp 360w, %(b)s-600.webp 600w, %(b)s-900.webp 900w" '
+        'sizes="%(sizes)s">'
+        '<img src="%(b)s-600.jpg" alt="%(alt)s" width="600" height="955"%(load)s>'
+        "</picture>"
+        % {"b": base, "sizes": sizes, "alt": escape(POLAROID_ALT[slug][lang], quote=True),
+           "load": ' fetchpriority="high"' if eager else ' loading="lazy" decoding="async"'}
+    )
+
 
 def _stroke():
     return '<img class="stroke" src="/img/stroke.svg" alt="" width="150" height="10">'
@@ -31,24 +61,24 @@ def _hero(site, texts, lang):
         "</div>"
         '<p class="hero__meta"><span class="dot"></span>%(address)s · %(today)s %(close)s</p>'
         "</div>"
-        # Фото героя — это LCP страницы, поэтому webp с двумя размерами
-        # и fetchpriority: на телефоне грузится 400px вместо 800px.
-        '<div class="hero__media"><span class="hero__circle" aria-hidden="true"></span>'
-        "<picture>"
-        '<source type="image/webp" sizes="(max-width: 900px) 88vw, 460px"'
-        ' srcset="/img/pizza/pizza-margherita-400.webp 400w,'
-        ' /img/pizza/pizza-margherita-800.webp 800w">'
-        '<img src="/img/pizza/pizza-margherita-800.jpg" alt="%(alt)s"'
-        ' width="800" height="800" fetchpriority="high" decoding="async">'
-        "</picture>"
+        # Веер из трёх полароидов — команда и гости. Оранжевый круг из макета
+        # меню остаётся позади: тот же мотив, что и раньше под пиццей.
+        '<div class="hero__media hero__media--wall"><span class="hero__circle" aria-hidden="true"></span>'
+        '<div class="fan">'
+        '<figure class="fan__card fan__card--left">%(p_team)s</figure>'
+        '<figure class="fan__card fan__card--center">%(p_chefs)s</figure>'
+        '<figure class="fan__card fan__card--right">%(p_guests)s</figure>'
+        "</div>"
         "</div></div></section>"
         % {"logo_alt": escape(texts["hero_logo_alt"], quote=True),
+           "p_team": polaroid("team-kitchen", lang, eager=True),
+           "p_chefs": polaroid("chefs-heart", lang, eager=True),
+           "p_guests": polaroid("guests-table", lang, eager=True),
            "kicker": escape(texts["hero_kicker"]), "lead": escape(texts["hero_text"]),
            "menu_url": url(lang, "menu"), "cta_menu": escape(t("cta.menu", lang)),
            "wa_btn": whatsapp_button(site, lang, "ghost"),
            "address": escape(site.address[lang]), "today": escape(t("hours.today", lang)),
-           "close": site.hours["close"],
-           "alt": escape("Пицца Маргарита — Frnds, %s" % CITY[lang], quote=True)}
+           "close": site.hours["close"]}
     )
 
 
@@ -96,12 +126,16 @@ def _breakfast(texts, lang):
 
 def _about(texts, lang):
     return (
-        '<section class="section watermark"><div class="container split">'
-        '<img src="/img/interior/placeholder.svg" alt="%s" width="900" height="600" loading="lazy">'
+        '<section class="section watermark"><div class="container split split--wall">'
+        '<div class="fan fan--duo">'
+        '<figure class="fan__card fan__card--left">%s</figure>'
+        '<figure class="fan__card fan__card--right">%s</figure>'
+        "</div>"
         '<div><h2 class="display">%s</h2>%s<p>%s</p>'
         '<p><a href="%s">%s →</a></p></div>'
         "</div></section>"
-        % (escape("Зал Frnds", quote=True), escape(texts["about_title"]), _stroke(),
+        % (polaroid("photo-wall", lang), polaroid("guests-table", lang),
+           escape(texts["about_title"]), _stroke(),
            escape(texts["about_text"]), url(lang, "about"), escape(t("nav.about", lang)))
     )
 

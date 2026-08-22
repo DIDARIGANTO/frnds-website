@@ -229,6 +229,40 @@ body[data-lang="kk"] .manifesto__sign { font-family: Manrope, system-ui, sans-se
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
 @keyframes pop  { from { opacity: 0; transform: scale(.92); } }
 
+/* ---------- веер полароидов (команда и гости) ---------- */
+
+.hero__media--wall { width: min(520px, 100%); }
+.fan {
+  position: relative; width: 100%; aspect-ratio: 1 / 0.92;
+}
+.fan__card {
+  position: absolute; margin: 0; width: 46%;
+  filter: drop-shadow(0 18px 28px rgba(120, 60, 8, .28));
+  transition: transform .35s cubic-bezier(.2, .7, .2, 1);
+}
+/* Сбрасываем правило круглого фото героя: полароид должен остаться
+   прямоугольным целиком, вместе с подписью внизу */
+.fan__card img {
+  width: 100%; height: auto; border-radius: 6px;
+  aspect-ratio: auto; object-fit: fill; box-shadow: none;
+}
+.fan__card--left   { left: 0;   top: 12%;  transform: rotate(-9deg); z-index: 1; }
+.fan__card--center { left: 27%; top: 0;    transform: rotate(2deg);  z-index: 2; }
+.fan__card--right  { right: 0;  top: 14%;  transform: rotate(8deg);  z-index: 1; }
+.fan__card:hover { transform: rotate(0) scale(1.04); z-index: 3; }
+
+/* Два полароида рядом с текстом — блок «Наш дом» */
+.fan--duo { aspect-ratio: 1 / 0.9; }
+.fan--duo .fan__card { width: 54%; }
+.fan--duo .fan__card--left  { left: 0;  top: 6%;  transform: rotate(-7deg); }
+.fan--duo .fan__card--right { right: 0; top: 0;   transform: rotate(6deg); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .fan__card { animation: pop .7s cubic-bezier(.2, .7, .25, 1.15) both; }
+  .fan__card--center { animation-delay: .1s; }
+  .fan__card--right  { animation-delay: .2s; }
+}
+
 /* ---------- стопка фото (страница доставки) ---------- */
 
 .hero--delivery { padding: 34px 0 48px; }
@@ -510,6 +544,8 @@ body[data-lang="kk"] .manifesto__sign { font-family: Manrope, system-ui, sans-se
   .hero--delivery .photo-stack { order: 0; }
   .hero__media { justify-self: center; width: min(340px, 88%); }
   .photo-stack { justify-self: center; width: min(360px, 90%); margin-top: 8px; }
+  .hero__media--wall { width: min(400px, 96%); }
+  .fan--duo { width: min(380px, 92%); margin: 0 auto; }
 
   .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .card__body { padding: 12px 13px 14px; }

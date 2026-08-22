@@ -3,6 +3,7 @@
 from html import escape
 
 from build.i18n import t, url
+from build.pages.home import polaroid
 from build.layout import Page
 from build.seo import breadcrumbs_jsonld, restaurant_jsonld
 
@@ -23,11 +24,13 @@ def build(site, menu, texts, lang):
         '<p class="hero__lead">%(intro)s</p>'
         '<img class="stroke" src="/img/stroke.svg" alt="" width="150" height="10">'
         "</div>"
-        '<section class="section watermark"><div class="container split">'
+        '<section class="section watermark"><div class="container split split--wall">'
         "<div>%(body)s</div>"
-        "<!-- ФОТО ЗАЛА: замените этот файл на снимок интерьера,"
-        " положив его как src/img/interior/hall.jpg и поправив путь ниже -->"
-        '<img src="/img/interior/placeholder.svg" alt="%(alt)s" width="900" height="600" loading="lazy">'
+        # Полароиды с фотостены: гости у стены и команда на кухне
+        '<div class="fan fan--duo">'
+        '<figure class="fan__card fan__card--left">%(p_wall)s</figure>'
+        '<figure class="fan__card fan__card--right">%(p_team)s</figure>'
+        "</div>"
         "</div></section>"
         '<section class="section section--tint"><div class="container">'
         '<div class="tiles">%(values)s</div>'
@@ -35,7 +38,8 @@ def build(site, menu, texts, lang):
         "</div></section></main>"
         % {"h1": escape(texts["h1"]), "intro": escape(texts["intro"]),
            "body": _paragraphs(texts["body"]), "values": values,
-           "alt": escape("Зал Frnds", quote=True),
+           "p_wall": polaroid("photo-wall", lang),
+           "p_team": polaroid("team-kitchen", lang),
            "menu_url": url(lang, "menu"), "cta": escape(t("cta.menu", lang))}
     )
     return Page(
